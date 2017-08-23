@@ -1,0 +1,2374 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Coworker</title>
+
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/style-res.css" rel="stylesheet" type="text/css">
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="fonts/fonts.css" rel="stylesheet" type="text/css">
+<link href="css/flags.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet"> 
+
+
+<link href="css/lightbox.css" rel="stylesheet" type="text/css">
+<script src="js/lightbox.js" type="text/javascript"></script>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+
+
+
+
+<script>
+	$(document).ready(function(){
+		$('a.res_menu').click(function(){
+		$('.mobile_menu').fadeIn();
+		});
+		
+		$('.minus_outer').click(function(){
+		$('.mobile_menu').fadeOut();
+		});
+		
+		$('.other_click').click(function(){
+		$('.coworker_seprate_text').hide();
+		$('.members_input_con').show();
+		});
+		
+		
+	});
+	
+</script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript">
+
+	$(document).ready(function(){
+		$('.nav-tabs-dropdown').each(function(i, elm) {
+    
+    $(elm).text($(elm).next('ul').find('li.active a').text());
+    
+});
+  
+$('.nav-tabs-dropdown').on('click', function(e) {
+
+    e.preventDefault();
+    
+    $(e.target).toggleClass('open').next('ul').slideToggle();
+    
+});
+
+$('#nav-tabs-wrapper a[data-toggle="tab"]').on('click', function(e) {
+
+    e.preventDefault();
+    
+    $(e.target).closest('ul').hide().prev('a').removeClass('open').text($(this).text());
+      
+});
+		
+		
+	})
+	
+
+
+</script>
+
+</head>
+
+<body>
+<main>
+
+<!--HEADER START-->
+<header class="coworker_header_main">
+
+<div class="mobile_menu">
+<div class="mob_menu_top">
+<span class="minus_outer"><img src="img/res_menu_minus.jpg" alt=""></span>
+	<ul>
+						<li><a href="javascript:;"><i class="fa fa-caret-right"></i>Home</a></li>
+						<li><a href="javascript:;"><i class="fa fa-caret-right"></i>Search</a></li>
+						<li><a href="javascript:;"><i class="fa fa-caret-right"></i>All Cities</a></li>
+						<li><a href="javascript:;"><i class="fa fa-caret-right"></i>The Lab</a></li>
+						<li><a href="javascript:;"><i class="fa fa-caret-right"></i>Sign Up</a></li>
+						<li class="lastNoBorder"><a href="javascript:;"><i class="fa fa-caret-right"></i>Login</a></li>
+						
+					</ul>
+					</div>
+					<div class="mob_menu_bottom">
+						<h2>Coworking Space Owners</h2>
+						<ul>
+						<li><a href="javascript:;"><i class="fa fa-caret-right"></i>List Your Space</a></li>
+					</ul>
+					</div>
+
+</div>
+<!--NAVBAR START-->
+
+<div class="container">
+<div class="row">
+<div class="col-xs-12 pad_none coworker_nav_outer coworker_nav_partner new_pg2">
+<a href="javascript:;" class="res_menu"><img src="img/res_menu.jpg" alt=""></a>
+<div class="col-xs-12 col-md-1 col-sm-1 pad_none coworker_logo_con partner_logo"><a href="index.html"><img src="img/img_inner_mobile_logo.png" alt="logo"></a></div>
+<div class="col-xs-12 col-md-6 col-sm-6 pad_none coworker_search_outer"><form action="#" method="get"><span><img src="img/img_search_pic.png" alt="search"></span>
+<input name="" placeholder="Search by coworking space, city or country" type="text"></form></div>
+<div class="col-md-5 col-sm-5 col-xs-12 pad_none login_blk mobButtonsWrapper01">
+						<ul>
+							<li> <a href="https://www.coworker.com/about-us"><img src="img/heart_grey.png" alt="heart pic"><span>About</span></a> </li>
+							<li> <a href="javascript:void(0);" onclick="openNavSignup();"><img alt="img" src="img//img_002.png"> <span>Sign Up</span></a> </li>
+							<li> <a href="javascript:void(0);" onclick="openNavLoging();"><img alt="img" src="img//img_003.png"> <span>Login</span></a> </li>
+						</ul>
+						<div class="space"> <a href="https://www.coworker.com/list-space">Add Your Space</a> </div>
+		</div>
+</div>
+</div>
+</div>
+
+<!--NAVBAR END
+
+
+
+
+</header>
+
+<!--HEADER END-->
+
+
+
+
+<!--USER RESEVATION START-->
+<section class="user-reservation-main-panel">
+
+<div class="col-xs-12 pade_none user-right-main-tabs">
+<div class="col-xs-12 pade_none user-right-main-tabs-panel">
+<div class="col-sm-3 col-md-2 col-xs-12 pade_none user-right-tabs"></div>
+<div class="col-sm-9 col-md-10 col-xs-12 pade_none user-reservation-top-right-panel">
+<h1>Your Coworker Profile</h1>
+<a href="#" class="nav-tabs-dropdown btn btn-block btn-primary user-mobile-tab-main">Tabs</a>
+<ul id="nav-tabs-wrapper" class="nav nav-tabs nav-tabs-horizontal">
+<li class="active"><a href="#htab1" data-toggle="tab" class="user-reservation-top-right-active">Manage My Spaces</a></li>
+<li><a href="#htab2" data-toggle="tab">Manage My profile</a></li>
+</ul>
+</div>
+
+</div>
+</div>
+            
+            
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane fade in active" id="htab1">
+<div class="col-sm-3 col-md-2 col-xs-12 pade_none user-reservation-left-panel">
+ <a href="#" class="nav-tabs-dropdown btn btn-block btn-primary user-mobile-tabs">Tabs</a>
+<ul id="nav-tabs-wrapper" class="nav nav-tabs nav-pills nav-stacked">
+<div class="col-xs-12 pade_none user-coworker-pic"><span><img src="img/img_coworker_user_pic.jpg" alt="user pic"></span></div>
+<h2>Nutcha Namngoen</h2>
+<samp><i class="fa fa-map-marker" aria-hidden="true"></i> Chaing Mai, Thailand</samp>
+<li><a href="#spacetab1" data-toggle="tab" class="user-reservation-left_active ">My Coworking Spaces</a></li>
+<li><a href="#spacetab2" data-toggle="tab">Reservations</a></li>
+<li><a href="#spacetab3" data-toggle="tab">Day Passes</a></li>
+<li><a href="#spacetab4" data-toggle="tab">Tours</a></li>
+<li><a href="#spacetab5" data-toggle="tab">Space Reviews</a></li>
+<li><a href="#spacetab6" data-toggle="tab">Messages <span class="user-message-con02">1</span></a></li>
+<li><a href="#spacetab7" data-toggle="tab">Swag</a></li>
+</ul>
+</div>
+<div class="col-sm-9 col-md-10 col-xs-12 pade_none user-reservation-right-panel">
+<div class="col-xs-12 pade_none user-reservation-right-panel-inner">
+<div class="tab-content">
+<!--MY COWORKING TAB START-->
+<div role="tabpanel" class="tab-pane fade in active" id="spacetab1">
+<h3>My Coworking Spaces</h3>
+<div class="col-xs-12 pade_none user-mycoworking-tab">
+<div class="col-xs-12 pade_none user-mycoworking-pic-con"><img src="img/img-coworking-tab-main-pic.jpg" alt="pic"></div>
+<h4>KoHub Coworking Space <span><i class="fa fa-check" aria-hidden="true"></i> Verified</span></h4>
+<span><i class="fa fa-map-marker" aria-hidden="true"></i> Moo 2, 224/1, Koh Lanta, Thailand</span>
+<ul>
+<li><a href="#">Edit My Space</a></li>
+<li><a href="#">Marketing</a></li>
+<li><a href="#">Bookings</a></li>
+<li><a href="#">Messages<span class="user-message-con">1</span></a></li>
+</ul>
+</div>
+
+<div class="col-xs-12 pade_none user-mycoworking-tab">
+<div class="col-xs-12 pade_none user-mycoworking-pic-con"><img src="img/img-coworking-tab-main-pic.jpg" alt="pic"></div>
+<h4>KoHub Coworking Space <span><i class="fa fa-check" aria-hidden="true"></i> Verified</span></h4>
+<span><i class="fa fa-map-marker" aria-hidden="true"></i> Moo 2, 224/1, Koh Lanta, Thailand</span>
+<ul>
+<li><a href="#">Edit My Space</a></li>
+<li><a href="#">Marketing</a></li>
+<li><a href="#">Bookings</a></li>
+<li><a href="#">Messages<span class="user-message-con">1</span></a></li>
+</ul>
+</div>
+</div>
+<!--MY COWORKING TAB END-->
+
+<!--RESERVATION TAB START-->
+<div role="tabpanel" class="tab-pane fade" id="spacetab2"> 
+
+<div class="col-xs-12 pade_none user-reservation-heading-main">
+<div class="col-sm-5 col-md-5 col-xs-5 pade_none user-reservation-heading"><h3>Reservation Schedule: <span class="reservation-schedule-red-text">(2)</span></h3></div>
+<div class="col-sm-7 col-md-7 col-xs-7 pade_none user-reservation-right">
+<ul>
+<li><span class="reservation-blue-box"></span>Reservation Request</li>
+<li><span class="reservation-pink-box"></span>Availability Request</li>
+</ul>
+</div>
+</div>
+
+<div class="col-xs-12 pade_none user-reservation-tab-main">
+<div class="col-xs-12 pade_none user-reservation-views-main">
+<form action="#" method="get">
+<div class="col-sm-6 col-md-6 col-xs-6 pade_none user-reservation-views-left"><span>View</span>
+<select>
+<option>All Spaces</option>
+<option>test</option>
+<option>test</option>
+</select>
+</div>
+<div class="col-sm-6 col-md-6 col-xs-6 pade_none user-reservation-views-right"><span><img src="img/img_reservation-search.png" alt="pic"><input name="search" type="text"  placeholder="Search By Refrance No."></span></div>
+
+</form>
+</div></div>
+
+<div class="col-xs-12 pade_none reservation-calender-outer"><img src="img/img-reservation-calender.png" alt="calender pic"></div>
+
+<div class="col-xs-12 pade_none user-reservation-heading-main">
+<div class="col-sm-5 col-md-5 col-xs-5 pade_none user-reservation-heading"><h3>Reservation Requests: <span class="reservation-schedule-blue-text">(2)</span></h3></div>
+<div class="col-sm-7 col-md-7 col-xs-7 pade_none user-reservation-views-right"><span><img src="img/img_reservation-search.png" alt="pic"><input name="search" type="text"  placeholder="Search By Refrance No."></span></div>
+</div>
+
+<div class="col-xs-12 pade_none user-reservation-request-main">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered table-responsive">
+  <tr>
+    <th valign="top" class="user-all-spaces-bg">All Spaces </th>
+    <th valign="top">Date/Time</th>
+    <th valign="top">Visitor</th>
+    <th valign="top">Message</th>
+    <th valign="top">Reservation/ Pass Type</th>
+    <th valign="top">Qty</th>
+    <th valign="top">Total&nbsp;Price</th>
+  </tr>
+  
+  <tr>
+    <td valign="top"><span class="user-spaces-name">Moms &amp; Pops Coworking</span> <span class="user-reservation-address">6321 PGA Blvd. Florida, USA</span>
+    <span class="user-reservation-reference-con">Ref. No.: <samp>63027-1528874</samp></span></td>
+    <td valign="top" class="user-date-time-con">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="top" class="user-visitor-text">Madison<br>Maidment</td>
+    <td valign="top">Can't wait to join the mom &amp; pops coworking
+community</td>
+    <td valign="top">Private Office<span class="user-monthly-pass">Montly Pass</span></td>
+    <td valign="top">3</td>
+    <td valign="top">$300</td>
+  </tr>
+  
+  <tr>
+    <td valign="top"><span class="user-spaces-name">Moms &amp; Pops Coworking</span> <span class="user-reservation-address">6321 PGA Blvd. Florida, USA</span>
+    <span class="user-reservation-reference-con">Ref. No.: <samp>63027-1528874</samp></span></td>
+    <td valign="top" class="user-date-time-con">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="top" class="user-visitor-text">Madison<br>Maidment</td>
+    <td valign="top">Can't wait to join the mom &amp; pops coworking
+community</td>
+    <td valign="top">Private Office<span class="user-monthly-pass">Montly Pass</span></td>
+    <td valign="top">3</td>
+    <td valign="top">$300</td>
+  </tr>
+  
+  <tr>
+    <td valign="top"><span class="user-spaces-name">Moms &amp; Pops Coworking</span> <span class="user-reservation-address">6321 PGA Blvd. Florida, USA</span>
+    <span class="user-reservation-reference-con">Ref. No.: <samp>63027-1528874</samp></span></td>
+    <td valign="top" class="user-date-time-con">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="top" class="user-visitor-text">Madison<br>Maidment</td>
+    <td valign="top">Can't wait to join the mom &amp; pops coworking
+community</td>
+    <td valign="top">Private Office<span class="user-monthly-pass">Montly Pass</span></td>
+    <td valign="top">3</td>
+    <td valign="top">$300</td>
+  </tr>
+  
+  <tr>
+    <td valign="top"><span class="user-spaces-name">Moms &amp; Pops Coworking</span> <span class="user-reservation-address">6321 PGA Blvd. Florida, USA</span>
+    <span class="user-reservation-reference-con">Ref. No.: <samp>63027-1528874</samp></span></td>
+    <td valign="top" class="user-date-time-con">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="top" class="user-visitor-text">Madison<br>Maidment</td>
+    <td valign="top">Can't wait to join the mom &amp; pops coworking
+community</td>
+    <td valign="top">Private Office<span class="user-monthly-pass">Montly Pass</span></td>
+    <td valign="top">3</td>
+    <td valign="top">$300</td>
+  </tr>
+  
+</table>
+</div>
+
+
+<div class="col-xs-12 pade_none user-reservation-heading-main">
+<div class="col-sm-5 col-md-5 col-xs-5 pade_none user-reservation-heading"><h3>Availability Requests: <span class="reservation-schedule-pink-text">(2)</span></h3></div>
+<div class="col-sm-7 col-md-7 col-xs-7 pade_none user-reservation-views-right"><span><img src="img/img_reservation-search.png" alt="pic"><input name="search" type="text"  placeholder="Search By Refrance No."></span></div>
+</div>
+
+<div class="col-xs-12 pade_none user-reservation-request-main">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered table-responsive">
+  <tr>
+    <th valign="top" class="user-all-spaces-bg">All Spaces </th>
+    <th valign="top">Date/Time</th>
+    <th valign="top">Visitor</th>
+    <th valign="top">Message</th>
+    <th valign="top">Reservation/ Pass Type</th>
+    <th valign="top">Qty</th>
+    <th valign="top">Total&nbsp;Price</th>
+  </tr>
+  
+  <tr>
+    <td valign="top"><span class="user-spaces-name">Moms &amp; Pops Coworking</span> <span class="user-reservation-address">6321 PGA Blvd. Florida, USA</span>
+    <span class="user-reservation-reference-con">Ref. No.: <samp>63027-1528874</samp></span></td>
+    <td valign="top" class="user-date-time-con">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="top" class="user-visitor-text">Madison<br>Maidment</td>
+    <td valign="top">Can't wait to join the mom &amp; pops coworking
+community</td>
+    <td valign="top">Private Office<span class="user-monthly-pass">Montly Pass</span></td>
+    <td valign="top">3</td>
+    <td valign="top">$300</td>
+  </tr>
+  
+  <tr>
+    <td valign="top"><span class="user-spaces-name">Moms &amp; Pops Coworking</span> <span class="user-reservation-address">6321 PGA Blvd. Florida, USA</span>
+    <span class="user-reservation-reference-con">Ref. No.: <samp>63027-1528874</samp></span></td>
+    <td valign="top" class="user-date-time-con">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="top" class="user-visitor-text">Madison<br>Maidment</td>
+    <td valign="top">Can't wait to join the mom &amp; pops coworking
+community</td>
+    <td valign="top">Private Office<span class="user-monthly-pass">Montly Pass</span></td>
+    <td valign="top">3</td>
+    <td valign="top">$300</td>
+  </tr>
+  
+  <tr>
+    <td valign="top"><span class="user-spaces-name">Moms &amp; Pops Coworking</span> <span class="user-reservation-address">6321 PGA Blvd. Florida, USA</span>
+    <span class="user-reservation-reference-con">Ref. No.: <samp>63027-1528874</samp></span></td>
+    <td valign="top" class="user-date-time-con">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="top" class="user-visitor-text">Madison<br>Maidment</td>
+    <td valign="top">Can't wait to join the mom &amp; pops coworking
+community</td>
+    <td valign="top">Private Office<span class="user-monthly-pass">Montly Pass</span></td>
+    <td valign="top">3</td>
+    <td valign="top">$300</td>
+  </tr>
+  
+  <tr>
+    <td valign="top"><span class="user-spaces-name">Moms &amp; Pops Coworking</span> <span class="user-reservation-address">6321 PGA Blvd. Florida, USA</span>
+    <span class="user-reservation-reference-con">Ref. No.: <samp>63027-1528874</samp></span></td>
+    <td valign="top" class="user-date-time-con">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="top" class="user-visitor-text">Madison<br>Maidment</td>
+    <td valign="top">Can't wait to join the mom &amp; pops coworking
+community</td>
+    <td valign="top">Private Office<span class="user-monthly-pass">Montly Pass</span></td>
+    <td valign="top">3</td>
+    <td valign="top">$300</td>
+  </tr>
+  
+</table>
+</div>
+
+<div class="col-xs-12 pade_none user-reservation-heading-main">
+<div class="col-sm-5 col-md-5 col-xs-5 pade_none user-reservation-heading"><h3>Past Reservations: <span class="reservation-schedule-red-text">(35)</span></h3></div>
+<div class="col-sm-7 col-md-7 col-xs-7 pade_none user-reservation-views-right"><span><img src="img/img_reservation-search.png" alt="pic"><input name="search" type="text"  placeholder="Search By Refrance No."></span></div>
+</div>
+
+<div class="col-xs-12 pade_none user-reservation-request-main">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered table-responsive">
+  <tr>
+    <th valign="top" class="user-all-spaces-bg">All Spaces </th>
+    <th valign="top">Date/Time</th>
+    <th valign="top">Visitor</th>
+    <th valign="top">Message</th>
+    <th valign="top">Reservation/ Pass Type</th>
+    <th valign="top">Qty</th>
+    <th valign="top">Total&nbsp;Price</th>
+    <th valign="top">Status</th>
+  </tr>
+  
+  <tr>
+    <td valign="top"><span class="user-spaces-name">Moms &amp; Pops Coworking</span> <span class="user-reservation-address">6321 PGA Blvd. Florida, USA</span>
+    <span class="user-reservation-reference-con">Ref. No.: <samp>63027-1528874</samp></span></td>
+    <td valign="top" class="user-date-time-con">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="top" class="user-visitor-text">Madison<br>Maidment</td>
+    <td valign="top">Can't wait to join the mom &amp; pops coworking
+community</td>
+    <td valign="top">Private Office<span class="user-monthly-pass">Monthly Pass</span></td>
+    <td valign="top">3</td>
+    <td valign="top">$300</td>
+    <td align="center" valign="middle"  class="user-follow-up"><a href="mailto:test@gmail.com">Follow&nbsp;Up</a></td>
+  </tr>
+  
+  <tr>
+    <td valign="top"><span class="user-spaces-name">Moms &amp; Pops Coworking</span> <span class="user-reservation-address">6321 PGA Blvd. Florida, USA</span>
+    <span class="user-reservation-reference-con">Ref. No.: <samp>63027-1528874</samp></span></td>
+    <td valign="top" class="user-date-time-con">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="top" class="user-visitor-text">Madison<br>Maidment</td>
+    <td valign="top">Can't wait to join the mom &amp; pops coworking
+community</td>
+    <td valign="top">Private Office<span class="user-monthly-pass">Monthly Pass</span></td>
+    <td valign="top">3</td>
+    <td valign="top">$300</td>
+    <td align="center" valign="middle"  class="user-follow-up"><a href="mailto:test@gmail.com">Follow&nbsp;Up</a></td>
+  </tr>
+  
+  <tr>
+    <td valign="top"><span class="user-spaces-name">Moms &amp; Pops Coworking</span> <span class="user-reservation-address">6321 PGA Blvd. Florida, USA</span>
+    <span class="user-reservation-reference-con">Ref. No.: <samp>63027-1528874</samp></span></td>
+    <td valign="top" class="user-date-time-con">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="top" class="user-visitor-text">Madison<br>Maidment</td>
+    <td valign="top">Can't wait to join the mom &amp; pops coworking
+community</td>
+    <td valign="top">Private Office<span class="user-monthly-pass">Monthly Pass</span></td>
+    <td valign="top">3</td>
+    <td valign="top">$300</td>
+    <td align="center" valign="middle"  class="user-follow-up"><a href="mailto:test@gmail.com">Follow&nbsp;Up</a></td>
+  </tr>
+  
+  <tr>
+    <td valign="top"><span class="user-spaces-name">Moms &amp; Pops Coworking</span> <span class="user-reservation-address">6321 PGA Blvd. Florida, USA</span>
+    <span class="user-reservation-reference-con">Ref. No.: <samp>63027-1528874</samp></span></td>
+    <td valign="top" class="user-date-time-con">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="top" class="user-visitor-text">Madison<br>Maidment</td>
+    <td valign="top">Can't wait to join the mom &amp; pops coworking
+community</td>
+    <td valign="top">Private Office<span class="user-monthly-pass">Monthly Pass</span></td>
+    <td valign="top">3</td>
+    <td valign="top">$300</td>
+    <td align="center" valign="middle"  class="user-follow-up"><a href="mailto:test@gmail.com">Follow&nbsp;Up</a></td>
+  </tr>
+  
+</table>
+</div>
+
+
+</div>
+
+<!--RESERVATION TAB END-->
+
+<!--DAYPASS TABS START-->
+<div role="tabpanel" class="tab-pane fade" id="spacetab3">
+<div class="col-xs-12 pade_none user-reservation-heading-main">
+<div class="col-sm-5 col-md-5 col-xs-5 pade_none user-reservation-heading"><h3>Day Pass Schedule: <span class="reservation-schedule-red-text">(2)</span></h3></div>
+<div class="col-sm-7 col-md-7 col-xs-7 pade_none user-reservation-right">
+<ul>
+<li><span class="reservation-green-box"></span>Free Day Pass</li>
+</ul>
+</div>
+</div>
+
+<div class="col-xs-12 pade_none user-reservation-tab-main">
+<div class="col-xs-12 pade_none user-reservation-views-main">
+<form action="#" method="get">
+<div class="col-sm-6 col-md-6 col-xs-6 pade_none user-reservation-views-left"><span>View</span>
+<select>
+<option>All Spaces</option>
+<option>test</option>
+<option>test</option>
+</select>
+</div>
+<div class="col-sm-6 col-md-6 col-xs-6 pade_none user-reservation-views-right"><span><img src="img/img_reservation-search.png" alt="pic"><input name="search" type="text"  placeholder="Search By Refrance No."></span></div>
+
+</form>
+</div></div>
+<div class="col-xs-12 pade_none reservation-calender-outer"><img src="img/img-reservation-calender-daypass.png" alt="calender pic"></div>
+
+<div class="col-xs-12 pade_none user-reservation-heading-main">
+<div class="col-sm-5 col-md-5 col-xs-5 pade_none user-reservation-heading"><h3>Free Day Pass Schedule: <span class="reservation-green-box-text">(4)</span></h3></div>
+<div class="col-sm-7 col-md-7 col-xs-7 pade_none user-reservation-views-right"><span><img src="img/img_reservation-search.png" alt="pic"><input name="search" placeholder="Search By Refrance No." type="text"></span></div>
+</div>
+
+<div class="col-xs-12 pade_none user-reservation-request-main">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered table-responsive">
+  <tr>
+    <th valign="top" class="user-all-spaces-bg">All Spaces </th>
+    <th valign="top">Date/Time</th>
+    <th valign="top">Visitor</th>
+    <th valign="top">Message</th>
+    <th valign="top">Total&nbsp;Price</th>
+  </tr>
+  
+  <tr>
+    <td valign="top"><span class="user-spaces-name">Moms &amp; Pops Coworking</span> <span class="user-reservation-address">6321 PGA Blvd. Florida, USA</span>
+    <span class="user-reservation-reference-con">Ref. No.: <samp>63027-1528874</samp></span></td>
+    <td valign="top" class="user-date-time-con">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="top" class="user-visitor-text">Madison<br>Maidment</td>
+    <td valign="top">Can't wait to join the mom &amp; pops coworking
+community</td>
+     <td valign="top">Free</td>
+  </tr>
+  
+  <tr>
+    <td valign="top"><span class="user-spaces-name">Moms &amp; Pops Coworking</span> <span class="user-reservation-address">6321 PGA Blvd. Florida, USA</span>
+    <span class="user-reservation-reference-con">Ref. No.: <samp>63027-1528874</samp></span></td>
+    <td valign="top" class="user-date-time-con">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="top" class="user-visitor-text">Madison<br>Maidment</td>
+    <td valign="top">Can't wait to join the mom &amp; pops coworking
+community</td>
+     <td valign="top">Free</td>
+  </tr>
+  
+  <tr>
+    <td valign="top"><span class="user-spaces-name">Moms &amp; Pops Coworking</span> <span class="user-reservation-address">6321 PGA Blvd. Florida, USA</span>
+    <span class="user-reservation-reference-con">Ref. No.: <samp>63027-1528874</samp></span></td>
+    <td valign="top" class="user-date-time-con">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="top" class="user-visitor-text">Madison<br>Maidment</td>
+    <td valign="top">Can't wait to join the mom &amp; pops coworking
+community</td>
+     <td valign="top">Free</td>
+  </tr>
+  
+  <tr>
+    <td valign="top"><span class="user-spaces-name">Moms &amp; Pops Coworking</span> <span class="user-reservation-address">6321 PGA Blvd. Florida, USA</span>
+    <span class="user-reservation-reference-con">Ref. No.: <samp>63027-1528874</samp></span></td>
+    <td valign="top" class="user-date-time-con">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="top" class="user-visitor-text">Madison<br>Maidment</td>
+    <td valign="top">Can't wait to join the mom &amp; pops coworking
+community</td>
+    <td valign="top">Free</td>
+  </tr>
+  
+</table>
+</div>
+
+<div class="col-xs-12 pade_none user-reservation-heading-main">
+<div class="col-sm-5 col-md-5 col-xs-5 pade_none user-reservation-heading"><h3>Past Day Passes Claimed: <span class="reservation-schedule-red-text">(35)</span></h3></div>
+<div class="col-sm-7 col-md-7 col-xs-7 pade_none user-reservation-views-right"><span><img src="img/img_reservation-search.png" alt="pic"><input name="search" placeholder="Search By Refrance No." type="text"></span></div>
+</div>	
+
+<div class="col-xs-12 pade_none user-reservation-request-main">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered table-responsive">
+  <tr>
+    <th valign="top" class="user-all-spaces-bg">All Spaces </th>
+    <th valign="top">Date/Time</th>
+    <th valign="top">Visitor</th>
+    <th valign="top">Message</th>
+    <th valign="top">Total&nbsp;Price</th>
+    <th valign="top">&nbsp;</th>
+  </tr>
+  
+  <tr>
+    <td valign="top"><span class="user-spaces-name">Moms &amp; Pops Coworking</span> <span class="user-reservation-address">6321 PGA Blvd. Florida, USA</span>
+    <span class="user-reservation-reference-con">Ref. No.: <samp>63027-1528874</samp></span></td>
+    <td valign="top" class="user-date-time-con">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="top" class="user-visitor-text">Madison<br>Maidment</td>
+    <td valign="top">Can't wait to join the mom &amp; pops coworking
+community</td>
+     <td valign="top">Free</td>
+     <td class="user-follow-up" align="center" valign="middle"><a href="mailto:test@gmail.com">Follow&nbsp;Up</a></td>
+  </tr>
+  
+  <tr>
+    <td valign="top"><span class="user-spaces-name">Moms &amp; Pops Coworking</span> <span class="user-reservation-address">6321 PGA Blvd. Florida, USA</span>
+    <span class="user-reservation-reference-con">Ref. No.: <samp>63027-1528874</samp></span></td>
+    <td valign="top" class="user-date-time-con">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="top" class="user-visitor-text">Madison<br>Maidment</td>
+    <td valign="top">Can't wait to join the mom &amp; pops coworking
+community</td>
+     <td valign="top">Free</td>
+     <td class="user-follow-up" align="center" valign="middle"><a href="mailto:test@gmail.com">Follow&nbsp;Up</a></td>
+  </tr>
+  
+  <tr>
+    <td valign="top"><span class="user-spaces-name">Moms &amp; Pops Coworking</span> <span class="user-reservation-address">6321 PGA Blvd. Florida, USA</span>
+    <span class="user-reservation-reference-con">Ref. No.: <samp>63027-1528874</samp></span></td>
+    <td valign="top" class="user-date-time-con">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="top" class="user-visitor-text">Madison<br>Maidment</td>
+    <td valign="top">Can't wait to join the mom &amp; pops coworking
+community</td>
+     <td valign="top">Free</td>
+     <td class="user-follow-up" align="center" valign="middle"><a href="mailto:test@gmail.com">Follow&nbsp;Up</a></td>
+  </tr>
+  
+  <tr>
+    <td valign="top"><span class="user-spaces-name">Moms &amp; Pops Coworking</span> <span class="user-reservation-address">6321 PGA Blvd. Florida, USA</span>
+    <span class="user-reservation-reference-con">Ref. No.: <samp>63027-1528874</samp></span></td>
+    <td valign="top" class="user-date-time-con">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="top" class="user-visitor-text">Madison<br>Maidment</td>
+    <td valign="top">Can't wait to join the mom &amp; pops coworking
+community</td>
+    <td valign="top">Free</td>
+    <td class="user-follow-up" align="center" valign="middle"><a href="mailto:test@gmail.com">Follow&nbsp;Up</a></td>
+  </tr>
+  
+</table>
+</div>
+
+
+</div>
+<!--DAYPASS TABS END-->
+
+<!--TOURS TABS START-->
+<div role="tabpanel" class="tab-pane fade " id="spacetab4">
+<div class="col-xs-12 pade_none user-reservation-heading-main">
+<div class="col-sm-5 col-md-5 col-xs-5 pade_none user-reservation-heading"><h3>Upcoming Tours: <span class="reservation-schedule-red-text">(2)</span></h3></div>
+<div class="col-sm-7 col-md-7 col-xs-7 pade_none user-reservation-right">
+<ul>
+<li><span class="reservation-yellow-box"></span>Tours</li>
+</ul>
+</div>
+</div>
+
+
+<div class="col-xs-12 pade_none user-reservation-tab-main">
+<div class="col-xs-12 pade_none user-reservation-views-main">
+<form action="#" method="get">
+<div class="col-sm-6 col-md-6 col-xs-6 pade_none user-reservation-views-left"><span>View</span>
+<select>
+<option>All Spaces</option>
+<option>test</option>
+<option>test</option>
+</select>
+</div>
+<div class="col-sm-6 col-md-6 col-xs-6 pade_none user-reservation-views-right"><span><img src="img/img_reservation-search.png" alt="pic"><input name="search" type="text"  placeholder="Search By Refrance No."></span></div>
+
+</form>
+</div></div>
+
+<div class="col-xs-12 pade_none reservation-calender-outer"><img src="img/img-reservation-calender-tours.png" alt="calender pic"></div>
+<div class="col-xs-12 pade_none user-reservation-heading-main">
+<div class="col-sm-5 col-md-5 col-xs-5 pade_none user-reservation-heading"><h3>Upcoming Tours: <span class="reservation-schedule-purple-text">(2)</span></h3></div>
+<div class="col-sm-7 col-md-7 col-xs-7 pade_none user-reservation-views-right"><span><img src="img/img_reservation-search.png" alt="pic"><input name="search" placeholder="Search By Refrance No." type="text"></span></div>
+</div>
+
+<div class="col-xs-12 pade_none user-reservation-request-main">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered table-responsive">
+  <tr>
+    <th valign="top" class="user-all-spaces-bg">All Spaces </th>
+    <th valign="top">Date/Time</th>
+    <th valign="top">Visitor</th>
+    <th valign="top">Message</th>
+  </tr>
+  
+  <tr>
+    <td valign="top"><span class="user-spaces-name">Moms &amp; Pops Coworking</span> <span class="user-reservation-address">6321 PGA Blvd. Florida, USA</span>
+    <span class="user-reservation-reference-con">Ref. No.: <samp>63027-1528874</samp></span></td>
+    <td valign="top" class="user-date-time-con">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="top" class="user-visitor-text">Madison<br>Maidment</td>
+    <td valign="top">Can't wait to join the mom &amp; pops coworking
+community</td>
+  </tr>
+  
+  <tr>
+    <td valign="top"><span class="user-spaces-name">Moms &amp; Pops Coworking</span> <span class="user-reservation-address">6321 PGA Blvd. Florida, USA</span>
+    <span class="user-reservation-reference-con">Ref. No.: <samp>63027-1528874</samp></span></td>
+    <td valign="top" class="user-date-time-con">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="top" class="user-visitor-text">Madison<br>Maidment</td>
+    <td valign="top">Can't wait to join the mom &amp; pops coworking
+community</td>
+  </tr>
+  
+  <tr>
+    <td valign="top"><span class="user-spaces-name">Moms &amp; Pops Coworking</span> <span class="user-reservation-address">6321 PGA Blvd. Florida, USA</span>
+    <span class="user-reservation-reference-con">Ref. No.: <samp>63027-1528874</samp></span></td>
+    <td valign="top" class="user-date-time-con">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="top" class="user-visitor-text">Madison<br>Maidment</td>
+    <td valign="top">Can't wait to join the mom &amp; pops coworking
+community</td>
+  </tr>
+  
+  <tr>
+    <td valign="top"><span class="user-spaces-name">Moms &amp; Pops Coworking</span> <span class="user-reservation-address">6321 PGA Blvd. Florida, USA</span>
+    <span class="user-reservation-reference-con">Ref. No.: <samp>63027-1528874</samp></span></td>
+    <td valign="top" class="user-date-time-con">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="top" class="user-visitor-text">Madison<br>Maidment</td>
+    <td valign="top">Can't wait to join the mom &amp; pops coworking
+community</td>
+  </tr>
+  
+</table>
+</div>
+
+<div class="col-xs-12 pade_none user-reservation-heading-main">
+<div class="col-sm-5 col-md-5 col-xs-5 pade_none user-reservation-heading"><h3>Past Tours: <span class="reservation-schedule-blue-text">(35)</span></h3></div>
+<div class="col-sm-7 col-md-7 col-xs-7 pade_none user-reservation-views-right"><span><img src="img/img_reservation-search.png" alt="pic"><input name="search" placeholder="Search By Refrance No." type="text"></span></div>
+</div>
+
+<div class="col-xs-12 pade_none user-reservation-request-main">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered table-responsive">
+  <tr>
+    <th valign="top" class="user-all-spaces-bg">All Spaces </th>
+    <th valign="top">Date/Time</th>
+    <th valign="top">Visitor</th>
+    <th valign="top">Message</th>
+    <th valign="top">Status</th>
+  </tr>
+  
+  <tr>
+    <td valign="top"><span class="user-spaces-name">Moms &amp; Pops Coworking</span> <span class="user-reservation-address">6321 PGA Blvd. Florida, USA</span>
+    <span class="user-reservation-reference-con">Ref. No.: <samp>63027-1528874</samp></span></td>
+    <td valign="top" class="user-date-time-con">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="top" class="user-visitor-text">Madison<br>Maidment</td>
+    <td valign="top">Can't wait to join the mom &amp; pops coworking community</td>
+    <td class="user-follow-up" align="center" valign="middle"><a href="mailto:test@gmail.com">Follow&nbsp;Up</a></td>
+  </tr>
+  
+  <tr>
+    <td valign="top"><span class="user-spaces-name">Moms &amp; Pops Coworking</span> <span class="user-reservation-address">6321 PGA Blvd. Florida, USA</span>
+    <span class="user-reservation-reference-con">Ref. No.: <samp>63027-1528874</samp></span></td>
+    <td valign="top" class="user-date-time-con">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="top" class="user-visitor-text">Madison<br>Maidment</td>
+    <td valign="top">Can't wait to join the mom &amp; pops coworking community</td>
+    <td class="user-follow-up" align="center" valign="middle"><a href="mailto:test@gmail.com">Follow&nbsp;Up</a></td>
+  </tr>
+  
+  <tr>
+    <td valign="top"><span class="user-spaces-name">Moms &amp; Pops Coworking</span> <span class="user-reservation-address">6321 PGA Blvd. Florida, USA</span>
+    <span class="user-reservation-reference-con">Ref. No.: <samp>63027-1528874</samp></span></td>
+    <td valign="top" class="user-date-time-con">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="top" class="user-visitor-text">Madison<br>Maidment</td>
+    <td valign="top">Can't wait to join the mom &amp; pops coworking community</td>
+    <td class="user-follow-up" align="center" valign="middle"><a href="mailto:test@gmail.com">Follow&nbsp;Up</a></td>
+  </tr>
+  
+  <tr>
+    <td valign="top"><span class="user-spaces-name">Moms &amp; Pops Coworking</span> <span class="user-reservation-address">6321 PGA Blvd. Florida, USA</span>
+    <span class="user-reservation-reference-con">Ref. No.: <samp>63027-1528874</samp></span></td>
+    <td valign="top" class="user-date-time-con">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="top" class="user-visitor-text">Madison<br>Maidment</td>
+    <td valign="top">Can't wait to join the mom &amp; pops coworking community</td>
+    <td class="user-follow-up" align="center" valign="middle"><a href="mailto:test@gmail.com">Follow&nbsp;Up</a></td>
+  </tr>
+  
+</table>
+</div>
+
+
+</div>
+<!--TOURS TABS END-->
+
+<!--SPACES REVIEWS TABS START-->
+<div role="tabpanel" class="tab-pane fade" id="spacetab5"> 
+<div class="col-xs-12 pade_none user-reservation-heading"><h3>Space Reviews: <span class="reservation-schedule-pink-text">(19)</span></h3></div>
+
+<div class="col-xs-12 pade_none user-space-review-main">
+<div id="1rv" class="col-sm-12 col-md-12 col-xs-12 pade_none reviews_con reivew_new_outer">
+                  <div class="col-sm-4 col-md-3 col-xs-12 reivew_new_outer">
+                    <div class="col-xs-12 pade_none mahaer_pic_outer"><span><img src="img/picture_008.jpg" alt="pic"></span></div>
+                    <span>Maher Hanafi</span>
+                    <ul>
+                      <li><i class="fa fa-commenting commenting-new01" aria-hidden="true"></i>1 Review</li>
+                      <li id="total_votes_4025"><i class="fa fa-thumbs-up thumbs-up04" aria-hidden="true"></i>0 Helpful  Votes</li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-8 col-md-9 col-xs-12 pade_none reviews_right-text-outer-main">
+                    <div class="col-xs-12 reviews_txt-new-outer01"> <a href="https://www.coworker.com/tunisia/tunis/cogite/review-3492">
+                      <h4>"One of a kind Co-Working space in the region"</h4>
+                      </a>
+                      <div class="reviews_txt-new-bottom01">
+                        <div class="views-rating-out-b">
+                          <div class="col-xs-12 pade_none review_star_panel">
+                          <i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i></div>
+                          <div class="review_date date_hide">July 2016</div>
+                        </div>
+                        <p class="review_truncate">I have been there couple of times and this co-working space is vibrant, full of energy and smart people. Way to go Cogite !</p>
+                        <div class="helpful05-out">
+                          <label id="helpful_vote_4025"><a href="javascript:void(0);"><span>helpful ?</span></a></label>
+                          <img src="img/heart-img01-red.png" class="heart-red-color01">
+                          <p id="vote_thanks_4025" onclick="register_vote_rev(4025,1,494);"><span id="vote_numbers_4025">0<img src="img/thanks-out-bg02.png" class="thanks-out-bg02"></span> Thank Maher</p>
+                          <p id="vote_thanks_msg_4025" style="display:none"><span id="vote_thanks_totals_4025"><img src="img/thanks-out-bg02.png" class="thanks-out-bg02"></span> Thanks for your vote!</p>
+                        </div>
+                      </div>
+                      <div class="arrow-position-left02"><img class="rply_img" src="img/arrow-position-left01.png"></div>
+                    </div>
+                  </div>
+                </div>
+                
+                
+                <div id="2rv" class="col-sm-12 col-md-12 col-xs-12 pade_none reviews_con reivew_new_outer">
+                  <div class="col-sm-4 col-md-3 col-xs-12 reivew_new_outer">
+                     <div class="col-xs-12 pade_none mahaer_pic_outer"><span><img src="img/picture.jpg" alt=""></span></div>
+                    <span>Rim Tatar</span>
+                    <ul>
+                      <li><i class="fa fa-commenting commenting-new01" aria-hidden="true"></i>1 Review</li>
+                      <li id="total_votes_3999"><i class="fa fa-thumbs-up thumbs-up04" aria-hidden="true"></i>0 Helpful  Votes</li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-8 col-md-9 col-xs-12 pade_none reviews_right-text-outer-main">
+                    <div class="col-xs-12 reviews_txt-new-outer01"> <a href="https://www.coworker.com/tunisia/tunis/cogite/review-3447">
+                      <h4>"I am actually enrolled in Founder Institute and I found the space good to work"</h4>
+                      </a>
+                      <div class="reviews_txt-new-bottom01">
+                        <div class="views-rating-out-b">
+                          <div class="col-xs-12 pade_none review_star_panel">
+                          <i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i></div>
+                          <div class="review_date date_hide">July 2016</div>
+                        </div>
+                        <div class="review_video"><iframe src="https://www.youtube.com/embed/yAoLSRbwxL8" frameborder="0" allowfullscreen></iframe></div>
+                        <div class="helpful05-out">
+                          <label id="helpful_vote_3999"><a href="javascript:void(0);"><span>helpful ?</span></a></label>
+                          <img src="img/heart-img01-red.png" class="heart-red-color01">
+                          <p id="vote_thanks_3999" onclick="register_vote_rev(3999,1,494);"><span id="vote_numbers_3999">0<img src="img/thanks-out-bg02.png" class="thanks-out-bg02"></span> Thank Rim</p>
+                          <p id="vote_thanks_msg_3999" style="display:none"><span id="vote_thanks_totals_3999"><img src="img/thanks-out-bg02.png" class="thanks-out-bg02"></span> Thanks for your vote!</p>
+                        </div>
+                      </div>
+                      <div class="arrow-position-left02"><img class="rply_img" src="img/arrow-position-left01.png"></div>
+                    </div>
+                  </div>
+                </div>
+                
+                
+                <div id="3rv" class="col-sm-12 col-md-12 col-xs-12 pade_none reviews_con reivew_new_outer reviews_lightbox_outer">
+                  <div class="col-sm-4 col-md-3 col-xs-12 reivew_new_outer">
+                     <div class="col-xs-12 pade_none mahaer_pic_outer"><span><img src="img/picture_011.jpg" alt=""></span></div>
+                    <span>Sami Ben Romdhane</span>
+                    <ul>
+                      <li><i class="fa fa-commenting commenting-new01" aria-hidden="true"></i>1 Review</li>
+                      <li id="total_votes_3957"><i class="fa fa-thumbs-up thumbs-up04" aria-hidden="true"></i>0 Helpful  Votes</li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-8 col-md-9 col-xs-12 pade_none reviews_right-text-outer-main">
+                    <div class="col-xs-12 reviews_txt-new-outer01"> <a href="https://www.coworker.com/tunisia/tunis/cogite/review-3397">
+                      <h4>"World class facility."</h4>
+                      </a>
+                      <div class="reviews_txt-new-bottom01">
+                        <div class="views-rating-out-b">
+                         <div class="col-xs-12 pade_none review_star_panel">
+                          <i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i></div>
+                          <div class="review_date date_hide">July 2016</div>
+                        </div>
+                        <p>I found the space good to work</p>
+                       <div class="review_pic_outer lb-album">
+
+                       <!--<ul>
+                       <li>
+                         <a class="example-image-link" href="#image-review01"> <img alt="Cogite, Tunis" src="img/img_review_pic01_cowork.jpg" onload="OnImageLoad(event);" > </a>
+                    <div class="lb-overlay coworker_pic_desktop" id="image-review01">
+                      <div class="full_pic_coworker"><img src="img/img_review_pic01_cowork_large.jpg" alt="Cogite, Tunis"></div>
+                      <div> <a href="#image-review04" class="lb-prev">Prev</a> <a href="#image-review02" class="lb-next">Next</a> </div>
+                      <a href="#page" class="lb-close">x</a> </div>
+                       </li>
+
+                       <li>
+                         <a class="example-image-link" href="#image-review02"> <img alt="Cogite, Tunis" src="img/img_review_pic02_cowork.png" onload="OnImageLoad(event);" > </a>
+                    <div class="lb-overlay coworker_pic_desktop" id="image-review02">
+                      <div class="full_pic_coworker"><img src="img/img_review_pic02_cowork_large.jpg" alt="Cogite, Tunis"></div>
+                      <div> <a href="#image-review01" class="lb-prev">Prev</a> <a href="#image-review03" class="lb-next">Next</a> </div>
+                      <a href="#page" class="lb-close">x</a> </div>
+                       </li>
+
+                       <li>
+                         <a class="example-image-link" href="#image-review03"> <img alt="Cogite, Tunis" src="img/img_review_pic03_cowork.jpg" onload="OnImageLoad(event);" > </a>
+                    <div class="lb-overlay coworker_pic_desktop" id="image-review03">
+                      <div class="full_pic_coworker"><img src="img/img_review_pic03_cowork_large.jpg" alt="Cogite, Tunis"></div>
+                      <div> <a href="#image-review02" class="lb-prev">Prev</a> <a href="#image-review04" class="lb-next">Next</a> </div>
+                      <a href="#page" class="lb-close">x</a> </div>
+                       </li>
+
+                       <li>
+                         <a class="example-image-link" href="#image-review04"> <img alt="Cogite, Tunis" src="img/img_review_pic04_cowork.jpg" onload="OnImageLoad(event);" > </a>
+                    <div class="lb-overlay coworker_pic_desktop" id="image-review04">
+                      <div class="full_pic_coworker"><img src="img/img_review_pic04_cowork_large.jpg" alt="Cogite, Tunis"></div>
+                      <div> <a href="#image-review03" class="lb-prev">Prev</a> <a href="#image-review01" class="lb-next">Next</a> </div>
+                      <a href="#page" class="lb-close">x</a> </div>
+                       </li>
+
+                       
+
+                       </ul>
+-->
+
+
+
+                    
+                       <img src="img/img_review_pic01_cowork.png" alt="review pic"> 
+                       <img src="img/img_review_pic01_cowork.png" alt="review pic">
+                       <img src="img/img_review_pic01_cowork.png" alt="review pic"> 
+                       <img src="img/img_review_pic01_cowork.png" alt="review pic">
+
+                       </div>
+                        <div class="helpful05-out">
+                          <label id="helpful_vote_3957"><a href="javascript:void(0);"><span>helpful ?</span></a></label>
+                          <img src="img/heart-img01-red.png" class="heart-red-color01">
+                          <p id="vote_thanks_3957" onclick="register_vote_rev(3957,1,494);"><span id="vote_numbers_3957">0<img src="img/thanks-out-bg02.png" class="thanks-out-bg02"></span> Thank Sami</p>
+                          <p id="vote_thanks_msg_3957" style="display:none"><span id="vote_thanks_totals_3957"><img src="img/thanks-out-bg02.png" class="thanks-out-bg02"></span> Thanks for your vote!</p>
+                        </div>
+                      </div>
+                      <div class="arrow-position-left02"><img class="rply_img" src="img/arrow-position-left01.png"></div>
+                    </div>
+                  </div>
+                </div>
+                
+                </div>
+                
+                
+
+
+</div>
+<!--SPACES REVIEWS TABS END-->
+
+<!--MESSAGE TAB START-->
+<div role="tabpanel" class="tab-pane fade" id="spacetab6">
+<div class="col-xs-12 pade_none user-reservation-heading-main">
+<div class="col-sm-5 col-md-5 col-xs-5 pade_none user-reservation-heading"><h3>Unseen Messages: <span class="reservation-schedule-pink-text">(2)</span></h3></div>
+<!--<div class="col-sm-7 col-md-7 col-xs-7 pade_none user-reservation-views-right"><span><img src="img/img_reservation-search.png" alt="pic"><input name="search" type="text"  placeholder="Search By Refrance No."></span></div>-->
+</div>
+
+<div class="col-xs-12 pade_none user-reservation-request-main">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered table-responsive user-message-table">
+  <tr class="user-message-headings">
+    <th valign="top" class="user-all-spaces-bg">Name </th>
+    <th valign="top">Date/Time</th>
+    <th valign="top">Email Address</th>
+    <th valign="top">Message</th>
+    <th valign="top">Status</th>
+  </tr>
+  
+  <tr class="user-unread-message">
+    <td valign="middle"  class="user-message-tab-name">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><span><img src="img/img_user-maidment-pic.png" alt="maidment pic"></span></td>
+    <td><samp >Madison&nbsp;Maidment</samp></td>
+  </tr>
+</table></td>
+    <td valign="middle"  class="user-date-time-con user-date-time-con02">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="middle" class="user-email-text"><a href="#">madison@coworker.com</a></td>
+    <td valign="middle" class="user-message-text" >Can't wait to join the mom &amp; pops coworking community Can't wait to join the mom &amp; pops coworking community</td>
+    <td align="center" valign="middle"  class="user-follow-up user-contact-button"><a href="#">Contact</a></td>
+  </tr>
+  
+  <tr>
+    <td valign="middle"  class="user-message-tab-name">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><span><img src="img/img_user-maidment-pic.png" alt="maidment pic"></span></td>
+    <td><samp >Madison&nbsp;Maidment</samp></td>
+  </tr>
+</table></td>
+    <td valign="middle"  class="user-date-time-con user-date-time-con02">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="middle" class="user-email-text"><a href="#">madison@coworker.com</a></td>
+    <td valign="middle" class="user-message-text" >Can't wait to join the mom &amp; pops coworking community Can't wait to join the mom &amp; pops coworking community</td>
+    <td align="center" valign="middle"  class="user-follow-up user-contact-button"><a href="#">Contact</a></td>
+  </tr>
+  
+  <tr>
+    <td valign="middle"  class="user-message-tab-name">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><span><img src="img/img_user-maidment-pic.png" alt="maidment pic"></span></td>
+    <td><samp >Madison&nbsp;Maidment</samp></td>
+  </tr>
+</table></td>
+    <td valign="middle"  class="user-date-time-con user-date-time-con02">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="middle" class="user-email-text"><a href="#">madison@coworker.com</a></td>
+    <td valign="middle" class="user-message-text" >Can't wait to join the mom &amp; pops coworking community Can't wait to join the mom &amp; pops coworking community</td>
+    <td align="center" valign="middle"  class="user-follow-up user-contact-button"><a href="#">Contact</a></td>
+  </tr>
+  
+  <tr>
+    <td valign="middle"  class="user-message-tab-name">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><span><img src="img/img_user-maidment-pic.png" alt="maidment pic"></span></td>
+    <td><samp >Madison&nbsp;Maidment</samp></td>
+  </tr>
+</table></td>
+    <td valign="middle"  class="user-date-time-con user-date-time-con02">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="middle" class="user-email-text"><a href="#">madison@coworker.com</a></td>
+    <td valign="middle" class="user-message-text" >Can't wait to join the mom &amp; pops coworking community Can't wait to join the mom &amp; pops coworking community</td>
+    <td align="center" valign="middle"  class="user-follow-up user-contact-button"><a href="#">Contact</a></td>
+  </tr>
+  
+  <tr>
+    <td valign="middle"  class="user-message-tab-name">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><span><img src="img/img_user-maidment-pic.png" alt="maidment pic"></span></td>
+    <td><samp >Madison&nbsp;Maidment</samp></td>
+  </tr>
+</table></td>
+    <td valign="middle"  class="user-date-time-con user-date-time-con02">06/07/17<span><i class="fa fa-clock-o" aria-hidden="true"></i> 11.30am</span></td>
+    <td valign="middle" class="user-email-text"><a href="#">madison@coworker.com</a></td>
+    <td valign="middle" class="user-message-text" >Can't wait to join the mom &amp; pops coworking community Can't wait to join the mom &amp; pops coworking community</td>
+    <td align="center" valign="middle"  class="user-follow-up user-contact-button"><a href="#">Contact</a></td>
+  </tr>
+  
+  
+  </table>
+  </div>
+
+
+</div>
+<!--MESSAGE TAB END-->
+
+<!--SWAG TAB START-->
+<div role="tabpanel" class="tab-pane fade" id="spacetab7"> 
+<div class="col-xs-12 pade_none your_website_main_outer">
+<h2>For Your Website</h2>
+<p>Get embeddable widgets and graphics for your own website that show how much your members love you...</p>
+
+<?php 
+
+ 
+ if(!empty($my_spaces)) {
+?>
+
+
+<div class="col-xs-12 pade_none review_widget_space">
+<?php 
+//echo "<pre>"; 
+//print_r($my_spaces);
+//echo "</pre>"; 
+
+?>
+    <select id="select-space">
+      <?php 
+	  $count = 0;
+	  foreach ($my_spaces as $my_space) {
+		  $first_space = $my_space->cs_id;
+		  if($count == 0){
+			  echo '<option selected value="'.$my_space->cs_id.'" data-colink="'.$siteUrl.$my_space->coworkspace_url.'">'.$my_space->name.'</option>';
+			  $first_space = $my_space->cs_id;
+		  }
+		  else{
+			  echo '<option value="'.$my_space->cs_id.'" data-colink="'.$siteUrl.$my_space->coworkspace_url.'">'.$my_space->name.'</option>';
+		  }
+		  $Count++;
+		  
+           
+		} 
+	?>
+    </select>
+
+</div>
+
+<div class="col-xs-12 pade_none your_website_review_widget_outer widget01-outer bottom-line">
+    <h3>1. Reviews Widget</h3>
+    <p>Perfect for Wordpress Footers and Sidebars, this is the best and easiest to promote your member reviews on your website</p>
+
+<div class="col-xs-12 pade_none website_members_main">
+    <div class="col-xs-4 col-sm-4 col-md-4 pade_none review_widget_widget_conn review_widget_input">
+          <label for="width">Width</label>
+          <input type="text" id="width" readonly style="border:0; color:#f6931f; font-weight:bold;">
+        <div id="slider-range-max"></div>
+    </div>
+
+
+    <div class="col-xs-4 col-sm-4 col-md-4 pade_none review_widget_widget_conn review_widget_input">
+          <label for="height">Height</label>
+          <input type="text" id="height" readonly style="border:0; color:#f6931f; font-weight:bold;">
+        <div id="slider-range-max02"></div>
+    </div>
+    <div class="col-xs-4 col-sm-4 col-md-4 pade_none review_widget_widget_conn review_border_widget_text">
+        <span>Border color</span>
+        <input type="text" value="#00d191" id="text-border-color" class="jscolor widget01-color" onchange="">
+    </div>
+    <!--<div class="col-xs-3 col-sm-3 col-md-3 pade_none review_widget_widget_conn review_border_widget_text">
+     <span>Number of reviews</span>
+        <select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+    </div>-->
+
+</div>
+
+<div class="col-xs-12 pade_none review_widget_website_pic"><iframe style="overflow-y:auto; overflow-x:hidden;  border-radius:6px; -webkit-border-radius:6px; -moz-border-radius:6px; border:3px solid #00d191; 
+background:  url(img/cw_img.png) center bottom 3px no-repeat,  -webkit-linear-gradient(bottom, #00d191 10px, #00d191 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);background: url(img/cw_img.png) center bottom 3px no-repeat,   -moz-linear-gradient(bottom, #00d191 10px, #00d191 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);background: url(img/cw_img.png) center bottom 3px no-repeat,  -o-linear-gradient(bottom, #00d191 10px, #00d191 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);background: url(img/cw_img.png) center bottom 3px no-repeat,  -ms-linear-gradient(bottom, #00d191 10px, #00d191 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);background: url(img/cw_img.png) center bottom 3px no-repeat,  linear-gradient(bottom, #00d191 10px, #00d191 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%); padding: 0 0 21px 0px;" src="http://www.staging.coworker.com/widget-review/3/5015"  frameborder="0" id="widget01"></iframe></div>
+
+<textarea placeholder="code Here" class="widget01-code" rows="5" readonly><iframe style="overflow-y:auto; overflow-x:hidden;  border-radius:6px; -webkit-border-radius:6px; -moz-border-radius:6px; border:3px solid #00d191; background:  url(img/cw_img.png) center bottom 3px no-repeat,  -webkit-linear-gradient(bottom, #00d191 10px, #00d191 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);background: url(img/cw_img.png) center bottom 3px no-repeat,   -moz-linear-gradient(bottom, #00d191 10px, #00d191 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);background: url(img/cw_img.png) center bottom 3px no-repeat,  -o-linear-gradient(bottom, #00d191 10px, #00d191 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);background: url(img/cw_img.png) center bottom 3px no-repeat,  -ms-linear-gradient(bottom, #00d191 10px, #00d191 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);background: url(img/cw_img.png) center bottom 3px no-repeat,  linear-gradient(bottom, #00d191 10px, #00d191 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%); padding: 0 0 21px 0px;" src="http://www.staging.coworker.com/widget-review/3/5015"  frameborder="0" id="widget01"></iframe></textarea>
+</div>  
+
+<div class="col-xs-12 pade_none your_website_review_widget_outer widget02-outer bottom-line">
+    <h3>2. Reviews Widget with comments</h3>
+    <p>Perfect for anywhere on your website, this widget shows the world your full member reviews!</p>
+
+<div class="col-xs-12 pade_none website_members_main">
+    <div class="col-xs-4 col-sm-4 col-md-4 pade_none review_widget_widget_conn review_widget_input">
+          <label for="width">Width</label>
+          <input type="text" id="width" readonly style="border:0; color:#f6931f; font-weight:bold;">
+        <div id="slider-range-max"></div>
+    </div>
+
+
+    <div class="col-xs-4 col-sm-4 col-md-4 pade_none review_widget_widget_conn review_widget_input">
+          <label for="height">Height</label>
+          <input type="text" id="height" readonly style="border:0; color:#f6931f; font-weight:bold;">
+        <div id="slider-range-max02"></div>
+    </div>
+    <div class="col-xs-4 col-sm-4 col-md-4 pade_none review_widget_widget_conn review_border_widget_text">
+        <span>Border color</span>
+        <input type="text" value="#00d191" id="text-border-color" class="jscolor widget01-color" onchange="">
+    </div>
+    <!--<div class="col-xs-3 col-sm-3 col-md-3 pade_none review_widget_widget_conn review_border_widget_text">
+     <span>Number of reviews</span>
+        <select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+    </div>-->
+
+</div>
+
+<div class="col-xs-12 pade_none review_widget_website_pic"><iframe style="overflow-y:auto; overflow-x:hidden;  border-radius:6px; -webkit-border-radius:6px; -moz-border-radius:6px; border:3px solid #00d191; background:  url(img/cw_img.png) center bottom 3px no-repeat,  -webkit-linear-gradient(bottom, #00d191 10px, #00d191 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);background: url(img/cw_img.png) center bottom 3px no-repeat,   -moz-linear-gradient(bottom, #00d191 10px, #00d191 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);background: url(img/cw_img.png) center bottom 3px no-repeat,  -o-linear-gradient(bottom, #00d191 10px, #00d191 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);background: url(img/cw_img.png) center bottom 3px no-repeat,  -ms-linear-gradient(bottom, #00d191 10px, #00d191 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);background: url(img/cw_img.png) center bottom 3px no-repeat,  linear-gradient(bottom, #00d191 10px, #00d191 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%); padding: 0 0 21px 0px;" src="http://www.staging.coworker.com/widget-review/4/5015" frameborder="0" id="widget01"></iframe></div>
+
+<textarea placeholder="code Here" class="widget01-code" rows="5" readonly><iframe style="overflow-y:auto; overflow-x:hidden;  border-radius:6px; -webkit-border-radius:6px; -moz-border-radius:6px; border:3px solid #00d191; background:  url(img/cw_img.png) center bottom 3px no-repeat,  -webkit-linear-gradient(bottom, #00d191 10px, #00d191 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);background: url(img/cw_img.png) center bottom 3px no-repeat,   -moz-linear-gradient(bottom, #00d191 10px, #00d191 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);background: url(img/cw_img.png) center bottom 3px no-repeat,  -o-linear-gradient(bottom, #00d191 10px, #00d191 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);background: url(img/cw_img.png) center bottom 3px no-repeat,  -ms-linear-gradient(bottom, #00d191 10px, #00d191 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);background: url(img/cw_img.png) center bottom 3px no-repeat,  linear-gradient(bottom, #00d191 10px, #00d191 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%); padding: 0 0 21px 0px;" src="http://www.staging.coworker.com/widget-review/4/5015" frameborder="0" id="widget01"></iframe></textarea>
+</div>  
+
+<div class="col-xs-12 pade_none your_website_review_widget_outer widget03-outer bottom-line">
+    <h3>3. Reviews Count</h3>
+    <p>Perfect for footers, sidebars or anywhere on your website, this widget shows you have an active member community with your number of reviews and star rating.</p>
+
+<div class="col-xs-12 pade_none website_members_main">
+    <div class="col-xs-4 col-sm-4 col-md-4 pade_none review_widget_widget_conn review_widget_input">
+          <label for="width">Width</label>
+          <input type="text" id="width" readonly style="border:0; color:#f6931f; font-weight:bold;">
+        <div id="slider-range-max"></div>
+    </div>
+
+
+    <!--<div class="col-xs-3 col-sm-3 col-md-3 pade_none review_widget_widget_conn review_widget_input">
+          <label for="height">Height</label>
+          <input type="text" id="height" readonly style="border:0; color:#f6931f; font-weight:bold;">px
+        <div id="slider-range-max02"></div>
+    </div>-->
+   
+	<div class="col-xs-3 col-sm-3 col-md-3 pade_none review_widget_widget_conn review_border_widget_text text-center">
+     <span>Widget Color</span>
+        <div class="col-xs-12 pade_none widget_color_out text-center">
+         <span class="widget_green_circle"></span>
+         <span class="widget_red_circle"></span>
+         <span class="widget_white_circle"></span>
+        </div>
+    </div>
+	<div class="col-xs-1 col-sm-1 col-md-1 pade_none review_widget_widget_conn review_or_text review_border_widget_text text-center"><span>or</span></div>
+	
+	 <div class="col-xs-4 col-sm-4 col-md-4 pade_none review_widget_widget_conn review_border_widget_text">
+        <span>Border color</span>
+        <input type="text" value="#00d191" id="text-border-color" class="jscolor widget01-color" onchange="">
+    </div>
+    <!--<div class="col-xs-3 col-sm-3 col-md-3 pade_none review_widget_widget_conn review_border_widget_text">
+     <span>Number of reviews</span>
+        <select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+    </div>-->
+
+</div>
+
+<div class="col-xs-12 pade_none review_widget_website_pic"><iframe style="overflow-y:auto; overflow-x:hidden;  border-radius:6px; -webkit-border-radius:6px; -moz-border-radius:6px; border:3px solid #00d191; background:  url(https://coworker.imgix.net/template/img/widgets/review/img_widget_bottom_logo.png) center bottom 3px no-repeat,  -webkit-linear-gradient(bottom, #00d191 10px, #00d191 40px, #ffffff 41px, #ffffff 10rem, #ffffff 100%);background: url(https://coworker.imgix.net/template/img/widgets/review/img_widget_bottom_logo.png) center bottom 3px no-repeat,   -moz-linear-gradient(bottom, #00d191 10px, #00d191 40px, #ffffff 41px, #ffffff 10rem, #ffffff 100%);background: url(https://coworker.imgix.net/template/img/widgets/review/img_widget_bottom_logo.png) center bottom 3px no-repeat,  -o-linear-gradient(bottom, #00d191 10px, #00d191 40px, #ffffff 41px, #ffffff 10rem, #ffffff 100%);background: url(https://coworker.imgix.net/template/img/widgets/review/img_widget_bottom_logo.png) center bottom 3px no-repeat,  -ms-linear-gradient(bottom, #00d191 10px, #00d191 40px, #ffffff 41px, #ffffff 10rem, #ffffff 100%);background: url(https://coworker.imgix.net/template/img/widgets/review/img_widget_bottom_logo.png) center bottom 3px no-repeat,  linear-gradient(bottom, #00d191 10px, #00d191 40px, #ffffff 41px, #ffffff 10rem, #ffffff 100%); padding: 0 0 41px 0px; " src="http://www.staging.coworker.com/widget-review/1/5015" height="213px" frameborder="0" id="widget01"></iframe></div>
+
+<textarea placeholder="code Here" class="widget01-code" rows="5" readonly><iframe style="overflow-y:auto; overflow-x:hidden;  border-radius:9px; -webkit-border-radius:9px; -moz-border-radius:9px; border:3px solid #00d191; background:  url(https://coworker.imgix.net/template/img/widgets/review/img_widget_bottom_logo.png) center bottom 3px no-repeat,  -webkit-linear-gradient(bottom, #00d191 10px, #00d191 40px, #ffffff 41px, #ffffff 10rem, #ffffff 100%);background: url(https://coworker.imgix.net/template/img/widgets/review/img_widget_bottom_logo.png) center bottom 3px no-repeat,   -moz-linear-gradient(bottom, #00d191 10px, #00d191 40px, #ffffff 41px, #ffffff 10rem, #ffffff 100%);background: url(https://coworker.imgix.net/template/img/widgets/review/img_widget_bottom_logo.png) center bottom 3px no-repeat,  -o-linear-gradient(bottom, #00d191 10px, #00d191 40px, #ffffff 41px, #ffffff 10rem, #ffffff 100%);background: url(https://coworker.imgix.net/template/img/widgets/review/img_widget_bottom_logo.png) center bottom 3px no-repeat,  -ms-linear-gradient(bottom, #00d191 10px, #00d191 40px, #ffffff 41px, #ffffff 10rem, #ffffff 100%);background: url(https://coworker.imgix.net/template/img/widgets/review/img_widget_bottom_logo.png) center bottom 3px no-repeat,  linear-gradient(bottom, #00d191 10px, #00d191 40px, #ffffff 41px, #ffffff 10rem, #ffffff 100%); padding: 0 0 41px 0px;" src="http://www.staging.coworker.com/widget-review/1/5015" height="213px" frameborder="0" id="widget01"></iframe></textarea>
+</div>  
+
+<div class="col-xs-12 pade_none your_website_review_widget_outer widget04-outer bottom-line">
+    <h3>4. Reviews Count</h3>
+    <p>Perfect for footers, sidebars or anywhere on your website, this widget shows you have an active member community with your number of reviews and star rating.</p>
+
+<div class="col-xs-12 pade_none website_members_main">
+    <div class="col-xs-6 col-sm-6 col-md-6 pade_none review_widget_widget_conn review_widget_input">
+          <label for="width">Width</label>
+          <input type="text" id="width" readonly style="border:0; color:#f6931f; font-weight:bold;">
+        <div id="slider-range-max"></div>
+    </div>
+
+
+    <!--<div class="col-xs-3 col-sm-3 col-md-3 pade_none review_widget_widget_conn review_widget_input">
+          <label for="height">Height</label>
+          <input type="text" id="height" readonly style="border:0; color:#f6931f; font-weight:bold;">px
+        <div id="slider-range-max02"></div>
+    </div>-->
+    <div class="col-xs-6 col-sm-6 col-md-6 pade_none review_widget_widget_conn review_border_widget_text">
+        <span>Border color</span>
+        <input type="text" value="#00d191" id="text-border-color" class="jscolor widget01-color" onchange="">
+    </div>
+	<!--div class="col-xs-4 col-sm-4 col-md-4 pade_none review_widget_widget_conn review_border_widget_text">
+     <span>Widget Color</span>
+        <div class="col-xs-12 pade_none widget_color_out">
+         <span class="widget_green_circle"></span>
+         <span class="widget_red_circle"></span>
+         <span class="widget_white_circle"></span>
+        </div>
+    </div-->
+    <!--<div class="col-xs-3 col-sm-3 col-md-3 pade_none review_widget_widget_conn review_border_widget_text">
+     <span>Number of reviews</span>
+        <select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+    </div>-->
+
+</div>
+
+<div class="col-xs-12 pade_none review_widget_website_pic"><iframe style="overflow-y:hidden; overflow-x:auto;  border-radius:6px; -webkit-border-radius:6px; -moz-border-radius:6px; border:3px solid #00d191; background:  url(img/cw_img.png) center bottom 3px no-repeat,  -webkit-linear-gradient(bottom, #00d191 10px, #00d191 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);background: url(img/cw_img.png) center bottom 3px no-repeat,   -moz-linear-gradient(bottom, #00d191 10px, #00d191 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);background: url(img/cw_img.png) center bottom 3px no-repeat,  -o-linear-gradient(bottom, #00d191 10px, #00d191 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);background: url(img/cw_img.png) center bottom 3px no-repeat,  -ms-linear-gradient(bottom, #00d191 10px, #00d191 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);background: url(img/cw_img.png) center bottom 3px no-repeat,  linear-gradient(bottom, #00d191 10px, #00d191 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%); padding: 0 0 21px 0px;" src="http://www.staging.coworker.com/widget-review/5/5015" height="265px" width="480px" frameborder="0" id="widget01"></iframe></div>
+
+<textarea placeholder="code Here" class="widget01-code" rows="5" readonly><iframe style="overflow-y:hidden; overflow-x:auto;  border-radius:9px; -webkit-border-radius:9px; -moz-border-radius:9px; border:3px solid #00d191; background:  url(img/cw_img.png) center bottom 3px no-repeat,  -webkit-linear-gradient(bottom, #00d191 10px, #00d191 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);background: url(img/cw_img.png) center bottom 3px no-repeat,   -moz-linear-gradient(bottom, #00d191 10px, #00d191 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);background: url(img/cw_img.png) center bottom 3px no-repeat,  -o-linear-gradient(bottom, #00d191 10px, #00d191 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);background: url(img/cw_img.png) center bottom 3px no-repeat,  -ms-linear-gradient(bottom, #00d191 10px, #00d191 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);background: url(img/cw_img.png) center bottom 3px no-repeat,  linear-gradient(bottom, #00d191 10px, #00d191 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%); padding: 0 0 21px 0px;" src="http://www.staging.coworker.com/widget-review/5/5015" height="265px" height="250px" width="480px" frameborder="0" id="widget01"></iframe></textarea>
+</div>  
+
+
+<div class="col-xs-12 pade_none your_website_review_widget_outer">
+    <h3>5. Downable Graphics</h3>
+    <p>Ideal for anuywhere for your website, this pulls in the numbers &nbsp; stars osyour reviews. </p>
+<div class="col-xs-12 pade_none members_say_widget">
+    <div class="col-xs-12 pade_none swag_inner_main_new">
+          <ul>
+            <li>
+              <div class="swag_download_pic"><img src="img/img_member_say_red01.png" alt="download Pic"></div>
+              <div class="swag_download_hover">
+                <div class="swag_download_content">
+                  <div class="swag_download_social"> 
+                 <div class="col-xs-12 pade_none widget_download_text"><a href="img/img_member_say_red01.png" download="img_member_say_red01">Download</a></div>  
+                 <div class="col-xs-12 pade_none widget_embeddable_text"><a href="#" data-toggle="modal" data-target="#embedabble_popup01">Embedabble code</a></div>
+                </div></div>
+              </div>
+            </li>
+
+<!--POPUP 1-->
+<div class="modal fade embeddale_con" id="embedabble_popup01" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <!--  <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+          <!--<h4 class="modal-title">Widget code</h4>-->
+        </div>
+        <div class="modal-body">
+         <textarea class="form-control" style="resize:none;" readonly id="code-text" rows="6"><a href="" class="widget-link"> <img src="img/img_member_say_red01.png" alt="download Pic"></a></textarea>
+         <!--<button class="btn copy-btn" data-clipboard-target="#code-text"  >
+            <i class="fa fa-files-o" aria-hidden="true"></i> Click to copy
+        </button>-->
+        </div>
+        <div class="modal-footer">
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+<!--POPUP 1 END-->
+
+
+            
+            <li>
+              <div class="swag_download_pic"><img src="img/img_member_say_green01.png" alt="download Pic"></div>
+              <div class="swag_download_hover">
+                <div class="swag_download_content">
+                  <div class="swag_download_social"> 
+                  <div class="col-xs-12 pade_none widget_download_text"><a href="img/img_member_say_green01.png" download="img_member_say_green01">Download</a></div>  
+                 <div class="col-xs-12 pade_none widget_embeddable_text"><a href="#" data-toggle="modal" data-target="#embedabble_popup02">Embedabble code</a></div>
+                   </div>
+                </div>
+              </div>
+            </li>
+
+            <!--POPUP 2-->
+<div class="modal fade embeddale_con" id="embedabble_popup02" role="dialog">
+    <div class="modal-dialog">
+    
+       <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <!--  <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+          <!--<h4 class="modal-title">Widget code</h4>-->
+        </div>
+        <div class="modal-body">
+         <textarea class="form-control" style="resize:none;" readonly id="code-text" rows="6"><a href="" class="widget-link"> <img src="img/img_member_say_green01.png" alt="download Pic"></a></textarea>
+         <!--<button class="btn copy-btn" data-clipboard-target="#code-text"  >
+            <i class="fa fa-files-o" aria-hidden="true"></i> Click to copy
+        </button>-->
+        </div>
+        <div class="modal-footer">
+          
+        </div>
+     
+      </div>
+      
+    </div>
+  </div>
+<!--POPUP 2 END-->
+            
+            <li>
+              <div class="swag_download_pic"><img src="img/img_member_say_red02.png" alt="download Pic"></div>
+              <div class="swag_download_hover">
+                <div class="swag_download_content">
+                  <div class="swag_download_social"> 
+                  <div class="col-xs-12 pade_none widget_download_text"><a href="img/img_member_say_red02.png" download="img_member_say_red02">Download</a></div>  
+                 <div class="col-xs-12 pade_none widget_embeddable_text"><a href="#" data-toggle="modal" data-target="#embedabble_popup03">Embedabble code</a></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+             <!--POPUP 3-->
+<div class="modal fade embeddale_con" id="embedabble_popup03" role="dialog">
+    <div class="modal-dialog">
+    
+          <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <!--  <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+          <!--<h4 class="modal-title">Widget code</h4>-->
+        </div>
+        <div class="modal-body">
+         <textarea class="form-control" style="resize:none;" readonly id="code-text" rows="6"><a href="" class="widget-link"> <img src="img/img_member_say_red02.png" alt="download Pic"></a></textarea>
+         <!--<button class="btn copy-btn" data-clipboard-target="#code-text"  >
+            <i class="fa fa-files-o" aria-hidden="true"></i> Click to copy
+        </button>-->
+        </div>
+        <div class="modal-footer">
+          
+        </div>
+      
+    </div>
+  
+  </div>
+  </div>
+<!--POPUP 3 END-->
+            
+            <li>
+              <div class="swag_download_pic"><img src="img/img_member_say_green02.png" alt="download Pic"></div>
+              <div class="swag_download_hover">
+                <div class="swag_download_content">
+                  <div class="swag_download_social"> 
+                  <div class="col-xs-12 pade_none widget_download_text"><a href="img/img_member_say_green02.png" download="img_member_say_green02">Download</a></div>  
+                 <div class="col-xs-12 pade_none widget_embeddable_text"><a href="#" data-toggle="modal" data-target="#embedabble_popup04">Embedabble code</a></div>
+                   </div>
+                </div>
+              </div>
+            </li>
+
+ <!--POPUP 4-->
+<div class="modal fade embeddale_con" id="embedabble_popup04" role="dialog">
+    <div class="modal-dialog">
+    
+      <div class="modal-content">
+        <div class="modal-header">
+          <!--  <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+          <!--<h4 class="modal-title">Widget code</h4>-->
+        </div>
+        <div class="modal-body">
+         <textarea class="form-control" style="resize:none;" readonly id="code-text" rows="6"><a href="" class="widget-link"> <img src="img/img_member_say_green02.png" alt="download Pic"></a></textarea>
+         <!--<button class="btn copy-btn" data-clipboard-target="#code-text"  >
+            <i class="fa fa-files-o" aria-hidden="true"></i> Click to copy
+        </button>-->
+        </div>
+        <div class="modal-footer">
+          
+        </div>
+      
+    </div>
+  
+    </div>
+  </div>
+<!--POPUP 4 END-->
+
+            
+          </ul>
+        </div>
+        
+       
+        
+        <div class="col-xs-12 pade_none swag_inner_main_new">
+          <ul>
+            <li>
+              <div class="swag_download_pic"><img src="img/img_check_out_our_review_red01.png" alt="download Pic"></div>
+              <div class="swag_download_hover">
+                <div class="swag_download_content">
+                  <div class="swag_download_social">
+                   <div class="col-xs-12 pade_none widget_download_text"><a href="img/img_check_out_our_review_red01.png" download="img_check_out_our_review_red01">Download</a></div>  
+                 <div class="col-xs-12 pade_none widget_embeddable_text"><a href="#" data-toggle="modal" data-target="#embedabble_popup09">Embedabble code</a>
+                 </div>
+                   </div>
+                </div>
+              </div>
+            </li>
+
+             <!--POPUP 9-->
+<div class="modal fade embeddale_con" id="embedabble_popup09" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <!--  <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+          <!--<h4 class="modal-title">Widget code</h4>-->
+        </div>
+        <div class="modal-body">
+         <textarea class="form-control" style="resize:none;" readonly id="code-text" rows="6"><a href="" class="widget-link"> <img src="img/img_check_out_our_review_red01.png" alt="download Pic"></a></textarea>
+         <!--<button class="btn copy-btn" data-clipboard-target="#code-text"  >
+            <i class="fa fa-files-o" aria-hidden="true"></i> Click to copy
+        </button>-->
+        </div>
+        <div class="modal-footer">
+          
+        </div>
+      
+    </div>
+  
+    </div>
+  </div>
+<!--POPUP 9 END-->
+
+            
+            <li>
+              <div class="swag_download_pic"><img src="img/img_check_out_our_review_green01.png" alt="download Pic"></div>
+              <div class="swag_download_hover">
+                <div class="swag_download_content">
+                  <div class="swag_download_social"> 
+                  <div class="col-xs-12 pade_none widget_download_text"><a href="img/img_check_out_our_review_green01.png" download="img_check_out_our_review_green01">Download</a></div>  
+                 <div class="col-xs-12 pade_none widget_embeddable_text"><a href="#" data-toggle="modal" data-target="#embedabble_popup10">Embedabble code</a>
+                 </div>
+                   </div>
+                </div>
+              </div>
+            </li>
+
+             <!--POPUP 10-->
+<div class="modal fade embeddale_con" id="embedabble_popup10" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <!--  <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+          <!--<h4 class="modal-title">Widget code</h4>-->
+        </div>
+        <div class="modal-body">
+         <textarea class="form-control" style="resize:none;" readonly id="code-text" rows="6"><a href="" class="widget-link"> <img src="img/img_check_out_our_review_green01.png" alt="download Pic"></a></textarea>
+         <!--<button class="btn copy-btn" data-clipboard-target="#code-text"  >
+            <i class="fa fa-files-o" aria-hidden="true"></i> Click to copy
+        </button>-->
+        </div>
+        <div class="modal-footer">
+          
+        </div>
+      
+    </div>
+  
+    </div>
+  </div>
+<!--POPUP 10 END-->
+            
+            <li>
+              <div class="swag_download_pic"><img src="img/img_check_out_our_review_red02.png" alt="download Pic"></div>
+              <div class="swag_download_hover">
+                <div class="swag_download_content">
+                  <div class="swag_download_social"> 
+                  <div class="col-xs-12 pade_none widget_download_text"><a href="img/img_check_out_our_review_red02.png" download="img_check_out_our_review_red02">Download</a></div>  
+                 <div class="col-xs-12 pade_none widget_embeddable_text"><a href="#" data-toggle="modal" data-target="#embedabble_popup11">Embedabble code</a>
+                 </div>
+                   </div>
+                </div>
+              </div>
+            </li>
+
+             <!--POPUP 11-->
+<div class="modal fade embeddale_con" id="embedabble_popup11" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <!--  <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+          <!--<h4 class="modal-title">Widget code</h4>-->
+        </div>
+        <div class="modal-body">
+         <textarea class="form-control" style="resize:none;" readonly id="code-text" rows="6"><a href="" class="widget-link"> <img src="img/img_check_out_our_review_red02.png" alt="download Pic"></a></textarea>
+         <!--<button class="btn copy-btn" data-clipboard-target="#code-text"  >
+            <i class="fa fa-files-o" aria-hidden="true"></i> Click to copy
+        </button>-->
+        </div>
+        <div class="modal-footer">
+          
+        </div>
+      
+    </div>
+  
+    </div>
+  </div>
+<!--POPUP 11 END-->
+
+            
+            <li>
+              <div class="swag_download_pic"><img src="img/img_check_out_our_review_green02.png" alt="download Pic"></div>
+              <div class="swag_download_hover">
+                <div class="swag_download_content">
+                  <div class="swag_download_social"> 
+                <div class="col-xs-12 pade_none widget_download_text"><a href="img/img_check_out_our_review_green02.png" download="img_check_out_our_review_green02">Download</a></div>  
+                 <div class="col-xs-12 pade_none widget_embeddable_text"><a href="#" data-toggle="modal" data-target="#embedabble_popup12">Embedabble code</a></div>
+                </div>
+                </div>
+              </div>
+            </li>
+
+             <!--POPUP 12-->
+<div class="modal fade embeddale_con" id="embedabble_popup12" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <!--  <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+          <!--<h4 class="modal-title">Widget code</h4>-->
+        </div>
+        <div class="modal-body">
+         <textarea class="form-control" style="resize:none;" readonly id="code-text" rows="6"><a href="" class="widget-link"> <img src="img/img_check_out_our_review_green02.png" alt="download Pic"></a></textarea>
+         <!--<button class="btn copy-btn" data-clipboard-target="#code-text"  >
+            <i class="fa fa-files-o" aria-hidden="true"></i> Click to copy
+        </button>-->
+        </div>
+        <div class="modal-footer">
+          
+        </div>
+      
+    </div>
+  
+    </div>
+  </div>
+<!--POPUP 12 END-->
+            
+          </ul>
+        </div>
+
+</div>
+
+
+<!--<div class="col-xs-12 pade_none members_say_widget_logos">
+    <div class="col-xs-12 pade_none your_website_logos_outer"><img src="img/img_members_say_logo01.png" alt="swag icon"></div>
+<div class="col-xs-12 pade_none your_website_logos_outer website_logo_bg"><img src="img/img_members_say_logo02.png" alt="swag icon"></div>
+
+<div class="col-xs-12 pade_none your_website_logos_outer"><img src="img/img_members_say_logo03.png" alt="swag icon"></div>
+<div class="col-xs-12 pade_none your_website_logos_outer website_logo_bg"><img src="img/img_members_say_logo04.png" alt="swag icon"></div>
+
+
+</div>-->
+
+<div class="col-xs-12 pade_none swag_logos_big_main">
+<ul>
+<li>
+              <div class="swag_download_pic"><img src="img/img_members_say_logo01.png" alt="swag icon"></div>
+              <div class="swag_download_hover">
+                <div class="swag_download_content">
+                  <div class="swag_download_social"> 
+                  <div class="col-xs-12 pade_none widget_download_text"><a href="img/img_members_say_logo01.png" download="img_members_say_logo01">Download</a></div>  
+                 <div class="col-xs-12 pade_none widget_embeddable_text"><a href="#" data-toggle="modal" data-target="#embedabble_popup13">Embedabble code</a>
+                 </div>
+                   </div>
+                </div>
+              </div>
+            </li>
+			
+			 <!--POPUP 13-->
+<div class="modal fade embeddale_con" id="embedabble_popup13" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <!--  <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+          <!--<h4 class="modal-title">Widget code</h4>-->
+        </div>
+        <div class="modal-body">
+         <textarea class="form-control" style="resize:none;" readonly id="code-text" rows="6"><a href="" class="widget-link"> <img src="img/img_members_say_logo01.png" alt="download Pic"></a></textarea>
+         <!--<button class="btn copy-btn" data-clipboard-target="#code-text"  >
+            <i class="fa fa-files-o" aria-hidden="true"></i> Click to copy
+        </button>-->
+        </div>
+        <div class="modal-footer">
+          
+        </div>
+      
+    </div>
+  
+    </div>
+  </div>
+<!--POPUP 13 END-->
+			
+
+
+<li  class="website_logo_bg">
+              <div class="swag_download_pic"><img src="img/img_members_say_logo02.png" alt="swag icon"></div>
+              <div class="swag_download_hover">
+                <div class="swag_download_content">
+                  <div class="swag_download_social"> 
+                  <div class="col-xs-12 pade_none widget_download_text"><a href="img/img_members_say_logo02.png" download="img_members_say_logo02">Download</a></div>  
+                 <div class="col-xs-12 pade_none widget_embeddable_text"><a href="#" data-toggle="modal" data-target="#embedabble_popup14">Embedabble code</a>
+                 </div>
+                   </div>
+                </div>
+              </div>
+            </li>
+
+ <!--POPUP 14-->
+<div class="modal fade embeddale_con" id="embedabble_popup14" role="dialog">
+    <div class="modal-dialog">
+    
+       <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <!--  <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+          <!--<h4 class="modal-title">Widget code</h4>-->
+        </div>
+        <div class="modal-body">
+         <textarea class="form-control" style="resize:none;" readonly id="code-text" rows="6"><a href="" class="widget-link"> <img src="img/img_members_say_logo02.png" alt="download Pic"></a></textarea>
+         <!--<button class="btn copy-btn" data-clipboard-target="#code-text"  >
+            <i class="fa fa-files-o" aria-hidden="true"></i> Click to copy
+        </button>-->
+        </div>
+        <div class="modal-footer">
+          
+        </div>
+      
+    </div>
+  
+    </div>
+  </div>
+<!--POPUP 14 END-->
+			
+
+<li >
+              <div class="swag_download_pic"><img src="img/img_members_say_logo03.png" alt="swag icon"></div>
+              <div class="swag_download_hover">
+                <div class="swag_download_content">
+                  <div class="swag_download_social"> 
+                  <div class="col-xs-12 pade_none widget_download_text"><a href="img/img_members_say_logo03.png" download="img_members_say_logo03">Download</a></div>  
+                 <div class="col-xs-12 pade_none widget_embeddable_text"><a href="#" data-toggle="modal" data-target="#embedabble_popup15">Embedabble code</a>
+                 </div>
+                   </div>
+                </div>
+              </div>
+            </li>
+			
+ <!--POPUP 15-->
+<div class="modal fade embeddale_con" id="embedabble_popup15" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <!--  <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+          <!--<h4 class="modal-title">Widget code</h4>-->
+        </div>
+        <div class="modal-body">
+         <textarea class="form-control" style="resize:none;" readonly id="code-text" rows="6"><a href="" class="widget-link"> <img src="img/img_members_say_logo03.png" alt="download Pic"></a></textarea>
+         <!--<button class="btn copy-btn" data-clipboard-target="#code-text"  >
+            <i class="fa fa-files-o" aria-hidden="true"></i> Click to copy
+        </button>-->
+        </div>
+        <div class="modal-footer">
+          
+        </div>
+      
+    </div>
+  
+    </div>
+  </div>
+<!--POPUP 15 END-->			
+
+
+<li  class="website_logo_bg">
+              <div class="swag_download_pic"><img src="img/img_members_say_logo04.png" alt="swag icon"></div>
+              <div class="swag_download_hover">
+                <div class="swag_download_content">
+                  <div class="swag_download_social"> 
+                  <div class="col-xs-12 pade_none widget_download_text"><a href="img/img_members_say_logo04.png" download="img_members_say_logo04">Download</a></div>  
+                 <div class="col-xs-12 pade_none widget_embeddable_text"><a href="#" data-toggle="modal" data-target="#embedabble_popup16">Embedabble code</a>
+                 </div>
+                   </div>
+                </div>
+              </div>
+            </li>	
+
+			 <!--POPUP 16-->
+<div class="modal fade embeddale_con" id="embedabble_popup16" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <!--<h4 class="modal-title">Widget code</h4>-->
+        </div>
+        <div class="modal-body">
+         <textarea class="form-control" style="resize:none;" readonly id="code-text" rows="4"><a href="" class="widget-link"> <img src="img/img_members_say_logo04.png" alt="download Pic"></a></textarea>
+         <!--<button class="btn copy-btn" data-clipboard-target="#code-text"  >
+            <i class="fa fa-files-o" aria-hidden="true"></i> Click to copy
+        </button>-->
+        </div>
+        <div class="modal-footer">
+          
+        </div>
+      
+    </div>
+  
+    </div>
+  </div>
+<!--POPUP 16 END-->
+			
+			
+</ul>
+</div>
+
+
+</div>
+
+<?php	 
+ }
+?>
+
+</form></div>
+</div>
+<!--SWAG TAB END-->
+</div>
+</div>
+</div>
+
+ 
+</div>
+<div role="tabpanel" class="tab-pane fade" id="htab2">
+<div class="col-sm-3 col-md-2 col-xs-12 pade_none user-reservation-left-panel">
+ <a href="#" class="nav-tabs-dropdown btn btn-block btn-primary user-mobile-tabs">Tabs</a>
+<ul id="nav-tabs-wrapper" class="nav nav-tabs nav-pills nav-stacked">
+<div class="col-xs-12 pade_none user-coworker-pic"><span><img src="img/img_coworker_user_pic.jpg" alt="user pic"></span></div>
+<h2>Nutcha Namngoen</h2>
+<samp><i class="fa fa-map-marker" aria-hidden="true"></i> Chaing Mai, Thailand</samp>
+<li><a href="#profiletab1" data-toggle="tab" class="user-reservation-left_active ">My Profile</a></li>
+<li><a href="#profiletab2" data-toggle="tab">Your Reviews</a></li>
+<li><a href="#profiletab3" data-toggle="tab">Connections</a></li>
+<li><a href="#profiletab4" data-toggle="tab">Log Out</a></li>
+</ul>
+</div>
+<div class="col-sm-9 col-md-10 col-xs-12 pade_none user-reservation-right-panel">
+<div class="col-xs-12 pade_none user-reservation-right-panel-inner">
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane fade in active" id="profiletab1">
+<!--MY PROFILE TAB START-->
+<h3>Profile </h3>
+<div class="col-xs-12 pade_none user-profile-tab">
+
+<table width="100" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <th>Name:</th>
+    <th>Nutcha Namngoen</th>
+    <th class="user-follow-up"><a href="#">Edit</a></th>
+  </tr>
+  <tr>
+    <td>Date&nbsp;of&nbsp;Birth:</td>
+    <td><strong>13th November 1988</strong></td>
+    <td class="user-follow-up"><a href="#">Edit</a></td>
+  </tr>
+   <tr>
+    <td>Location:</td>
+    <td><i class="fa fa-map-marker" aria-hidden="true"></i> Moo 2, 224/1, Koh Lanta, Thailand</td>
+    <td class="user-follow-up"><a href="#">Edit</a></td>
+  </tr>
+  <tr>
+    <td valign="top">About Me:</td>
+    <td>I am Web Designer with 8+ years of working experience, design expertise and commitment to client satisfaction that distinguishes me from others. I am passionate about my work, quality and will strive to solve my clients' needs. I take a personal interest in the success of my clients and work collaboratively to ensure that the end product is something to be proud of, which fulfils client objectives. I believe in rendering only the best quality work.</td>
+    <td class="user-follow-up"><a href="#">Edit</a></td>
+  </tr>
+  <tr>
+    <td>Contact&nbsp;Email:</td>
+    <td><strong>test@yahoo.com</strong></td>
+    <td class="user-follow-up"><a href="#">Edit</a></td>
+  </tr>
+  <tr>
+    <td>Password:</td>
+    <td>********</td>
+    <td class="user-follow-up"><a href="#">Edit</a></td>
+  </tr>
+  <tr>
+    <td>Facebook</td>
+    <td><strong>www.facebook.com/test</strong></td>
+    <td class="user-follow-up"><a href="#">Edit</a></td>
+  </tr>
+</table>
+
+</div>
+<!--MY PROFILE TAB END-->
+</div>
+<div role="tabpanel" class="tab-pane fade" id="profiletab2"> Your Reviews </div>
+
+<!--CONNECTIONS TAB START-->
+<div role="tabpanel" class="tab-pane fade" id="profiletab3">
+<h3>Connections</h3>
+</div>
+<!--CONNECTIONS TAB END-->
+
+<div role="tabpanel" class="tab-pane fade" id="profiletab4">Log Out</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+            </div>
+
+
+
+</section>
+<!--USER RESEVATION END-->
+
+
+<!-- FOOTER START-->
+<footer class="footer_coworker_new_main">
+<div class="container">
+<div class="row">
+<div class="col-xs-12 pade_none footer_coworker_top_links_con">
+<ul>
+<li><a href="https://www.coworker.com/about-us">About</a></li>
+<li><a href="#">News</a></li>
+<li><a href="#">Member Perks</a></li>
+</ul>
+</div>
+
+<div class="col-xs-12 pade_none footer_coworker_bottom_links_con">
+<ul>
+<h4>Search</h4>
+<li><a href="https://www.coworker.com/search/">Search Spaces</a></li>
+<li><a href="https://www.coworker.com/cities">Search by City</a></li>
+<li><a href="https://www.coworker.com/search/top-rated">Top Rated Spaces</a></li>
+<li><a href="https://www.coworker.com/search/most-reviewed">Most Reviewed Spaces</a></li>
+<li><a href="https://www.coworker.com/map">Coworking Map</a></li>
+</ul>
+
+<ul>
+<h4>Reviews</h4>
+<li><a href="https://www.coworker.com/reviews">View all Reviews</a></li>
+<li><a href="#">Write a Review</a></li>
+</ul>
+
+<ul class="footer_about_list01">
+<h4>For Spaces</h4>
+<li><a href="https://www.coworker.com/list-space">Add your space</a></li>
+<li><a href="#">Swag</a></li>
+<li><a href="#">Coworker Connect</a></li>
+</ul>
+
+<ul class="footer_about_list02">
+<h4>For Members</h4>
+<li><a href="#">Sign Up</a></li>
+<li><a href="#">Login</a></li>
+<li><a href="#">Join our List</a></li>
+</ul>
+
+<ul class="footer_about_list">
+<h4>Coworker lab</h4>
+<li><a href="https://www.coworker.com/lab/">Our Blog</a></li>
+<li><a href="#">For Contributors</a></li>
+<li><a href="#">Recent Articles</a></li>
+</ul>
+
+<ul class="footer_about_list">
+<h4>Connect</h4>
+<li><a href="https://www.coworker.com/press">Press &amp; Media</a></li>
+<li><a href="#">API for Developers</a></li>
+<li><a href="#">Become a Partner</a></li>
+<li><a href="https://www.coworker.com/contact">Contact Us</a></li>
+</ul>
+
+<ul class="footer_about_list">
+<h4>About</h4>
+<li><a href="https://www.coworker.com/about-us">Our Story</a></li>
+<li><a href="https://www.coworker.com/team">Meet the Team</a></li>
+<li><a href="https://www.coworker.com/help">FAQs</a></li>
+</ul>
+
+</div>
+
+<div class="col-xs-12 pade_none footer_new_social_links_main">
+<div class="col-xs-12 pade_none footer_new_social_links_top">
+<ul>
+<li><a href="https://www.facebook.com/coworkerglobal" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+<li><a href="https://twitter.com/coworkerglobal" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+<li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+<li><a href="https://www.instagram.com/coworker/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+<li><a href="https://www.youtube.com/channel/UCJlxGftk_XMG7R6sVf9UbVQ" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+</ul>
+</div>
+<div class="col-xs-12 pade_none footer_new_copyright_outer">
+<ul>
+<li>© 2017 Coworker</li>
+<li><a href="mailto:hello@coworker.com">hello@coworker.com</a></li>
+<li><a href="https://www.coworker.com/privacy-policy">Privacy Policy</a></li>
+<li><a href="https://www.coworker.com/terms">Terms &amp; Conditions</a></li>
+</ul>
+</div>
+</div>
+
+
+
+
+</div>
+</div>
+
+</footer>
+
+
+<!-- FOOTER END-->
+
+</main>
+
+
+
+
+
+    <script>
+  
+	$(function(){
+	$('.coworker_footer_tabs_main li a').click(function(){
+	$('.coworker_footer_tabs_main li a').removeClass('coworker_active_footer'); // remove the class from the currently selected
+	$(this).addClass('coworker_active_footer'); // add the class to the newly clicked link
+	if(!$(this).addClass('coworker_active_footer')) {
+	} else {
+	$(this).addClass('coworker_active_footer');
+	$(this).next().stop(true,true).removeClass('coworker_active_footer');
+	}
+	});
+	
+	});
+
+</script>
+
+<script>
+  
+	$(function(){
+	$('.api_coworker_left_panel li a').click(function(){
+	$('.api_coworker_left_panel li a').removeClass('api-left-active'); // remove the class from the currently selected
+	$(this).addClass('api-left-active'); // add the class to the newly clicked link
+	if(!$(this).addClass('api-left-active')) {
+	} else {
+	$(this).addClass('api-left-active');
+	$(this).next().stop(true,true).removeClass('api-left-active');
+	}
+	});
+	
+	
+	$(function(){
+	$('.user-reservation-left-panel li a').click(function(){
+	$('.user-reservation-left-panel li a').removeClass('user-reservation-left_active'); // remove the class from the currently selected
+	$(this).addClass('user-reservation-left_active'); // add the class to the newly clicked link
+	if(!$(this).addClass('user-reservation-left_active')) {
+	} else {
+	$(this).addClass('user-reservation-left_active');
+	$(this).next().stop(true,true).removeClass('user-reservation-left_active');
+	}
+	});
+	
+	$(function(){
+	$('.user-reservation-top-right-panel li a').click(function(){
+	$('.user-reservation-top-right-panel li a').removeClass('user-reservation-top-right-active'); // remove the class from the currently selected
+	$(this).addClass('user-reservation-top-right-active'); // add the class to the newly clicked link
+	if(!$(this).addClass('user-reservation-top-right-active')) {
+	} else {
+	$(this).addClass('user-reservation-top-right-active');
+	$(this).next().stop(true,true).removeClass('user-reservation-top-right-active');
+	}
+	});
+	
+	});
+	});
+	});
+	
+	
+
+</script>
+
+
+<!--WIDGET SCRIPT START-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.0.4/jscolor.min.js"></script>
+<script>
+$( function() {
+	
+	String.prototype.splice = function(idx, rem, str) {
+		return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
+	};
+
+
+	
+    $( ".widget01-outer #slider-range-max" ).slider({
+      min: 200,
+      max: 560,
+      value: 300,
+      create: function( event, ui ) {
+			 $( ".widget01-outer #width" ).val( ui.value + "px");
+			$('.widget01-outer iframe#widget01').attr('width',ui.value + "px");
+			
+		},
+		slide: function( event, ui ) {
+			 $( ".widget01-outer #width" ).val( ui.value + "px");
+			$('.widget01-outer iframe#widget01').attr('width',ui.value + "px");
+			
+			$('.widget01-outer .widget01-code').val($('.widget01-outer #widget01').parent().html());
+		}
+    });
+    $( ".widget01-outer #width" ).val( $( ".widget01-outer #slider-range-max" ).slider( "value" ) + "px");
+	$('.widget01-outer iframe#widget01').attr('width', $( ".widget01-outer #slider-range-max" ).slider( "value" ));
+
+ $( ".widget01-outer #slider-range-max02" ).slider({
+      min: 200,
+      max: 680,
+      value: 414,
+      create: function( event, ui ) {
+			 $( ".widget01-outer #height" ).val( ui.value + "px");
+			$('.widget01-outer iframe#widget01').attr('height', ui.value +"px");
+			
+		},
+		slide: function( event, ui ) {
+			$( ".widget01-outer #height" ).val( ui.value + "px");
+			$('.widget01-outer iframe#widget01').attr('height',ui.value + "px");
+			$('.widget01-outer .widget01-code').val($('.widget01-outer #widget01').parent().html());
+		}
+    });
+    $( ".widget01-outer #height" ).val( $( ".widget01-outer #slider-range-max02" ).slider( "value" ) + "px");
+	$('.widget01-outer iframe#widget01').attr('height', $( ".widget01-outer #slider-range-max02" ).slider( "value" ));
+
+ $( "#slider-range-max03" ).slider({
+      min: 200,
+      max: 560,
+      value: 300,
+      slide: function( event, ui ) {
+        $( "#width02" ).val( ui.value + "px");
+		
+      }
+    });
+    $( "#width02" ).val( $( "#slider-range-max03" ).slider( "value" ) + "px");
+	
+
+ $( "#slider-range-max04" ).slider({
+      min: 200,
+      max: 680,
+      value: 414,
+      slide: function( event, ui ) {
+        $( "#height02" ).val( ui.value + "px");
+      }
+    });
+    $( "#height02" ).val( $( "#slider-range-max04" ).slider( "value" ) + "px");
+
+	var border_color = $('#text-border-color').val();
+	$('iframe#widget01').css('border','3px solid '+ border_color);
+	$('.widget01-outer iframe#widget01').css('background',' url(img/cw_img.png) center bottom 3px no-repeat, -webkit-linear-gradient(bottom, #'+ border_color+' 10px, #'+ border_color+' 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%)');
+		$('.widget01-outer iframe#widget01').css('background',' url(img/cw_img.png) center bottom 3px no-repeat,  --moz-linear-gradient(bottom, #'+ border_color+' 10px, #'+ border_color+' 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%)');
+		$('.widget01-outer iframe#widget01').css('background',' url(img/cw_img.png) center bottom 3px no-repeat,  -o-linear-gradient(bottom, #'+ border_color+' 10px, #'+ border_color +' 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%)');
+		$('.widget01-outer iframe#widget01').css('background',' url(img/cw_img.png) center bottom 3px no-repeat,   -ms-linear-gradient(bottom, #'+ border_color+' 10px, #'+ border_color+' 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%)');
+		$('.widget01-outer iframe#widget01').css('background',' url(img/cw_img.png) center bottom 3px no-repeat,  linear-gradient(bottom, #'+ border_color +' 10px, #'+ border_color +' 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%)');
+	
+	$('#text-border-color').keyup(function(){
+		var border_color = $('#text-border-color').val();
+		$('iframe#widget01').css('border','3px solid '+ border_color);
+	});
+
+	$('body').on('change','.widget01-outer .widget01-color',function(){
+		$('.widget01-outer iframe#widget01').css('border','3px solid #'+ $('.widget01-outer .widget01-color').val());
+		var widget_code = $('.widget01-outer #widget01').parent().html();
+		widget_code = widget_code.replace(/\&quot;/g,'');
+		var start_pos = widget_code.indexOf('background');
+		var end_pos = widget_code.indexOf(';',start_pos)+1; 
+		var text_to_get = widget_code.substring(start_pos,end_pos);
+		
+		widget_code = widget_code.replace(text_to_get,'');
+		//alert(widget_code);
+		var count = widget_code.indexOf("border");
+		
+		var new_code = widget_code.splice(count, 0, 'background: url(img/cw_img.png) center bottom 3px no-repeat,  --moz-linear-gradient(bottom, #'+ $('.widget01-outer .widget01-color').val()+' 10px, #'+ $('.widget01-outer .widget01-color').val()+' 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%); background: url(img/cw_img.png) center bottom 3px no-repeat,  -o-linear-gradient(bottom, #'+ $('.widget01-outer .widget01-color').val()+' 10px, #'+ $('.widget01-outer .widget01-color').val()+' 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%); background: url(img/cw_img.png) center bottom 3px no-repeat,   -ms-linear-gradient(bottom, #'+ $('.widget01-outer .widget01-color').val()+' 10px, #'+ $('.widget01-outer .widget01-color').val()+' 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%); background: url(img/cw_img.png) center bottom 3px no-repeat,  linear-gradient(bottom, #'+ $('.widget01-outer .widget01-color').val()+' 10px, #'+ $('.widget01-outer .widget01-color').val()+' 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%); background:  url(img/cw_img.png) center bottom 3px no-repeat, -webkit-linear-gradient(bottom, #'+ $('.widget01-outer .widget01-color').val()+' 10px, #'+ $('.widget01-outer .widget01-color').val()+' 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);');
+		
+		//alert(new_code);
+		
+		/*$('.widget01-outer iframe#widget01').css('background',' url(img/cw_img.png) center bottom 3px no-repeat,  --moz-linear-gradient(bottom, #'+ $('.widget01-outer .widget01-color').val()+' 10px, #'+ $('.widget01-outer .widget01-color').val()+' 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%)');
+		$('.widget01-outer iframe#widget01').css('background',' url(img/cw_img.png) center bottom 3px no-repeat,  -o-linear-gradient(bottom, #'+ $('.widget01-outer .widget01-color').val()+' 10px, #'+ $('.widget01-outer .widget01-color').val()+' 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%)');
+		$('.widget01-outer iframe#widget01').css('background',' url(img/cw_img.png) center bottom 3px no-repeat,   -ms-linear-gradient(bottom, #'+ $('.widget01-outer .widget01-color').val()+' 10px, #'+ $('.widget01-outer .widget01-color').val()+' 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%)');
+		$('.widget01-outer iframe#widget01').css('background',' url(img/cw_img.png) center bottom 3px no-repeat,  linear-gradient(bottom, #'+ $('.widget01-outer .widget01-color').val()+' 10px, #'+ $('.widget01-outer .widget01-color').val()+' 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%)');
+		$('.widget01-outer iframe#widget01').css('background',' url(img/cw_img.png) center bottom 3px no-repeat, -webkit-linear-gradient(bottom, #'+ $('.widget01-outer .widget01-color').val()+' 10px, #'+ $('.widget01-outer .widget01-color').val()+' 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%)');*/
+		/*
+			background-image: -webkit-linear-gradient(bottom, #f00 10px, #f00 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);
+			background-image: -moz-linear-gradient(bottom, #f00 10px, #f00 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);
+			background-image: -o-linear-gradient(bottom, #f00 10px, #f00 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);
+			background-image: -ms-linear-gradient(bottom, #f00 10px, #f00 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);
+			background-image: linear-gradient(bottom, #f00 10px, #f00 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);
+		*/
+		$('.widget01-outer .widget01-code').val(new_code);
+		$('.widget01-outer #widget01').parent().html(new_code);
+	});
+
+	$('#select-space').change(function(){
+		$('.widget01-outer iframe#widget01').attr('src','http://www.staging.coworker.com/widget-review/3/'+$('#select-space').val());
+		$('.widget02-outer iframe#widget01').attr('src','http://www.staging.coworker.com/widget-review/4/'+$('#select-space').val());
+		$('.widget03-outer iframe#widget01').attr('src','http://www.staging.coworker.com/widget-review/1/'+$('#select-space').val());
+		$('.widget04-outer iframe#widget01').attr('src','http://www.staging.coworker.com/widget-review/5/'+$('#select-space').val());
+		
+		$('.widget01-outer .widget01-code').val($('.widget01-outer #widget01').parent().html());
+		$('.widget02-outer .widget01-code').val($('.widget02-outer #widget01').parent().html());
+		$('.widget03-outer .widget01-code').val($('.widget03-outer #widget01').parent().html());
+		$('.widget04-outer .widget01-code').val($('.widget04-outer #widget01').parent().html());
+	});
+	
+	
+	
+	
+	
+	/*----- second widget ------*/
+	
+	$( ".widget02-outer #slider-range-max" ).slider({
+      min: 200,
+      max: 560,
+      value: 300,
+      create: function( event, ui ) {
+			 $( ".widget02-outer #width" ).val( ui.value + "px");
+			$('.widget02-outer iframe#widget01').attr('width',ui.value + "px");
+			
+		},
+		slide: function( event, ui ) {
+			 $( ".widget02-outer #width" ).val( ui.value + "px");
+			$('.widget02-outer iframe#widget01').attr('width',ui.value + "px");
+			$('.widget02-outer .widget01-code').val($('.widget02-outer #widget01').parent().html());
+		}
+    });
+    $( ".widget02-outer #width" ).val( $( ".widget02-outer #slider-range-max" ).slider( "value" ) + "px");
+	$('.widget02-outer iframe#widget01').attr('width', $( ".widget02-outer #slider-range-max" ).slider( "value" ));
+
+ $( ".widget02-outer #slider-range-max02" ).slider({
+      min: 200,
+      max: 680,
+      value: 414,
+      create: function( event, ui ) {
+			 $( ".widget02-outer #height" ).val( ui.value + "px");
+			$('.widget02-outer iframe#widget01').attr('height', ui.value +"px");
+			
+		},
+		slide: function( event, ui ) {
+			$( ".widget02-outer #height" ).val( ui.value + "px");
+			$('.widget02-outer iframe#widget01').attr('height',ui.value + "px");
+			$('.widget02-outer .widget01-code').val($('.widget02-outer #widget01').parent().html());
+		}
+    });
+    $( ".widget02-outer #height" ).val( $( ".widget02-outer #slider-range-max02" ).slider( "value" ) + "px");
+	$('.widget02-outer iframe#widget01').attr('height', $( ".widget02-outer #slider-range-max02" ).slider( "value" ));
+	
+	$('body').on('change','.widget02-outer .widget01-color',function(){
+		$('.widget02-outer iframe#widget01').css('border','3px solid #'+ $('.widget02-outer .widget01-color').val());
+		var widget_code = $('.widget02-outer #widget01').parent().html();
+		widget_code = widget_code.replace(/\&quot;/g,'');
+		var start_pos = widget_code.indexOf('background');
+		var end_pos = widget_code.indexOf(';',start_pos)+1; 
+		var text_to_get = widget_code.substring(start_pos,end_pos);
+		
+		widget_code = widget_code.replace(text_to_get,'');
+		//alert(widget_code);
+		var count = widget_code.indexOf("border");
+		
+		var new_code = widget_code.splice(count, 0, 'background: url(img/cw_img.png) center bottom 3px no-repeat,  --moz-linear-gradient(bottom, #'+ $('.widget02-outer .widget01-color').val()+' 10px, #'+ $('.widget02-outer .widget01-color').val()+' 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%); background: url(img/cw_img.png) center bottom 3px no-repeat,  -o-linear-gradient(bottom, #'+ $('.widget02-outer .widget01-color').val()+' 10px, #'+ $('.widget02-outer .widget01-color').val()+' 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%); background: url(img/cw_img.png) center bottom 3px no-repeat,   -ms-linear-gradient(bottom, #'+ $('.widget02-outer .widget01-color').val()+' 10px, #'+ $('.widget02-outer .widget01-color').val()+' 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%); background: url(img/cw_img.png) center bottom 3px no-repeat,  linear-gradient(bottom, #'+ $('.widget02-outer .widget01-color').val()+' 10px, #'+ $('.widget02-outer .widget01-color').val()+' 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%); background:  url(img/cw_img.png) center bottom 3px no-repeat, -webkit-linear-gradient(bottom, #'+ $('.widget02-outer .widget01-color').val()+' 10px, #'+ $('.widget02-outer .widget01-color').val()+' 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);');
+		
+		$('.widget02-outer .widget01-code').val(new_code);
+		$('.widget02-outer #widget01').parent().html(new_code);
+	});
+	
+	
+	/*----- third widget ------*/
+	
+	$( ".widget03-outer #slider-range-max" ).slider({
+      min: 170,
+      max: 500,
+      value: 262,
+      create: function( event, ui ) {
+			 $( ".widget03-outer #width" ).val( ui.value + "px");
+			$('.widget03-outer iframe#widget01').attr('width',ui.value + "px");
+			
+		},
+		slide: function( event, ui ) {
+			 $( ".widget03-outer #width" ).val( ui.value + "px");
+			$('.widget03-outer iframe#widget01').attr('width',ui.value + "px");
+			$('.widget03-outer .widget01-code').val($('.widget03-outer #widget01').parent().html());
+		}
+    });
+    $( ".widget03-outer #width" ).val( $( ".widget03-outer #slider-range-max" ).slider( "value" ) + "px");
+	$('.widget03-outer iframe#widget01').attr('width', $( ".widget03-outer #slider-range-max" ).slider( "value" ));
+
+ $( ".widget03-outer #slider-range-max02" ).slider({
+      min: 100,
+      max: 500,
+      value: 209,
+      create: function( event, ui ) {
+			 //$( ".widget03-outer #height" ).val( ui.value );
+			//$('.widget03-outer iframe#widget01').attr('height', ui.value +"px");
+			
+		},
+		slide: function( event, ui ) {
+			//$( ".widget03-outer #height" ).val( ui.value );
+			//$('.widget03-outer iframe#widget01').attr('height',ui.value + "px");
+			//$('.widget03-outer .widget01-code').val($('.widget03-outer #widget01').parent().html());
+		}
+    });
+    $( ".widget03-outer #height" ).val( $( ".widget03-outer #slider-range-max02" ).slider( "value" ) );
+	//$('.widget03-outer iframe#widget01').attr('height', $( ".widget03-outer #slider-range-max02" ).slider( "value" ));
+	
+	
+	/*----- fourth widget ------*/
+	
+	$( ".widget04-outer #slider-range-max" ).slider({
+      min: 480,
+      max: 650,
+      value: 490,
+      create: function( event, ui ) {
+			 $( ".widget04-outer #width" ).val( ui.value + "px");
+			$('.widget04-outer iframe#widget01').attr('width',ui.value + "px");
+			
+		},
+		slide: function( event, ui ) {
+			 $( ".widget04-outer #width" ).val( ui.value );
+			$('.widget04-outer iframe#widget01').attr('width',ui.value + "px");
+			$('.widget04-outer .widget01-code').val($('.widget04-outer #widget01').parent().html());
+		}
+    });
+    $( ".widget04-outer #width" ).val( $( ".widget04-outer #slider-range-max" ).slider( "value" ) + "px");
+	$('.widget04-outer iframe#widget01').attr('width', $( ".widget04-outer #slider-range-max" ).slider( "value" ));
+
+
+	
+	$('body').on('change','.widget04-outer .widget01-color',function(){
+		$('.widget04-outer iframe#widget01').css('border','3px solid #'+ $('.widget04-outer .widget01-color').val());
+		var widget_code = $('.widget04-outer #widget01').parent().html();
+		widget_code = widget_code.replace(/\&quot;/g,'');
+		var start_pos = widget_code.indexOf('background');
+		var end_pos = widget_code.indexOf(';',start_pos)+1; 
+		var text_to_get = widget_code.substring(start_pos,end_pos);
+		
+		widget_code = widget_code.replace(text_to_get,'');
+		//alert(widget_code);
+		var count = widget_code.indexOf("border");
+		
+		var new_code = widget_code.splice(count, 0, 'background: url(img/cw_img.png) center bottom 3px no-repeat,  --moz-linear-gradient(bottom, #'+ $('.widget04-outer .widget01-color').val()+' 10px, #'+ $('.widget04-outer .widget01-color').val()+' 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%); background: url(img/cw_img.png) center bottom 3px no-repeat,  -o-linear-gradient(bottom, #'+ $('.widget04-outer .widget01-color').val()+' 10px, #'+ $('.widget04-outer .widget01-color').val()+' 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%); background: url(img/cw_img.png) center bottom 3px no-repeat,   -ms-linear-gradient(bottom, #'+ $('.widget04-outer .widget01-color').val()+' 10px, #'+ $('.widget04-outer .widget01-color').val()+' 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%); background: url(img/cw_img.png) center bottom 3px no-repeat,  linear-gradient(bottom, #'+ $('.widget04-outer .widget01-color').val()+' 10px, #'+ $('.widget04-outer .widget01-color').val()+' 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%); background:  url(img/cw_img.png) center bottom 3px no-repeat, -webkit-linear-gradient(bottom, #'+ $('.widget04-outer .widget01-color').val()+' 10px, #'+ $('.widget04-outer .widget01-color').val()+' 20px, #ffffff 21px, #ffffff 10rem, #ffffff 100%);');
+		
+		$('.widget04-outer .widget01-code').val(new_code);
+		$('.widget04-outer #widget01').parent().html(new_code);
+	});
+	
+	
+	
+	var small_widget_logo ="https://coworker.imgix.net/template/img/widgets/review/img_widget_bottom_logo.png";
+	$('body').on('change','.widget03-outer .widget01-color',function(){
+		
+		$('.widget03-outer iframe#widget01').css('border','3px solid #'+ $('.widget03-outer .widget01-color').val());
+		var widget_code = $('.widget03-outer #widget01').parent().html();
+		widget_code = widget_code.replace(/\&quot;/g,'');
+		var start_pos = widget_code.indexOf('background');
+		var end_pos = widget_code.indexOf(';',start_pos)+1; 
+		var text_to_get = widget_code.substring(start_pos,end_pos);
+		
+		widget_code = widget_code.replace(text_to_get,'');
+		//alert(widget_code);
+		var count = widget_code.indexOf("border");
+		
+		var new_code = widget_code.splice(count, 0, 'background: url('+ small_widget_logo +') center bottom 3px no-repeat,  --moz-linear-gradient(bottom, #'+ $('.widget03-outer .widget01-color').val()+' 10px, #'+ $('.widget03-outer .widget01-color').val()+' 40px, #ffffff 41px, #ffffff 10rem, #ffffff 100%); background: url('+ small_widget_logo +') center bottom 3px no-repeat,  -o-linear-gradient(bottom, #'+ $('.widget03-outer .widget01-color').val()+' 10px, #'+ $('.widget03-outer .widget01-color').val()+' 40px, #ffffff 41px, #ffffff 10rem, #ffffff 100%); background: url('+ small_widget_logo +') center bottom 3px no-repeat,   -ms-linear-gradient(bottom, #'+ $('.widget03-outer .widget01-color').val()+' 10px, #'+ $('.widget03-outer .widget01-color').val()+' 40px, #ffffff 41px, #ffffff 10rem, #ffffff 100%); background: url('+ small_widget_logo +') center bottom 3px no-repeat,  linear-gradient(bottom, #'+ $('.widget03-outer .widget01-color').val()+' 10px, #'+ $('.widget03-outer .widget01-color').val()+' 40px, #ffffff 41px, #ffffff 10rem, #ffffff 100%); background:  url('+ small_widget_logo +') center bottom 3px no-repeat, -webkit-linear-gradient(bottom, #'+ $('.widget03-outer .widget01-color').val()+' 10px, #'+ $('.widget03-outer .widget01-color').val()+' 40px, #ffffff 41px, #ffffff 10rem, #ffffff 100%);');
+		
+		$('.widget03-outer .widget01-code').val(new_code);
+		$('.widget03-outer #widget01').parent().html(new_code);
+	});
+	//#00d08f
+	
+	$('.widget03-outer .widget_green_circle').click(function(){
+		small_widget_logo ="https://coworker.imgix.net/template/img/widgets/review/img_widget_bottom_logo.png";
+		$('.widget03-outer iframe#widget01').css('border','3px solid #00d08f');
+		//$('.widget03-outer iframe#widget01').attr('src','<?php echo $siteUrl; ?>widget-review/1/'+$('#select-space').val());
+		var widget_code = $('.widget03-outer #widget01').parent().html();
+		widget_code = widget_code.replace(/\&quot;/g,'');
+		var start_pos = widget_code.indexOf('background');
+		var end_pos = widget_code.indexOf(';',start_pos)+1; 
+		var text_to_get = widget_code.substring(start_pos,end_pos);
+		
+		widget_code = widget_code.replace(text_to_get,'');
+		//alert(widget_code);
+		var count = widget_code.indexOf("border");
+		
+		var new_code = widget_code.splice(count, 0, 'background: url('+ small_widget_logo +') center bottom 3px no-repeat,  --moz-linear-gradient(bottom, #00d08f 10px, #00d08f 40px, #ffffff 41px, #ffffff 10rem, #ffffff 100%); background: url('+ small_widget_logo +') center bottom 3px no-repeat,  -o-linear-gradient(bottom, #00d08f 10px, #00d08f 40px, #ffffff 41px, #ffffff 10rem, #ffffff 100%); background: url('+ small_widget_logo +') center bottom 3px no-repeat,   -ms-linear-gradient(bottom, #00d08f 10px, #00d08f 40px, #ffffff 41px, #ffffff 10rem, #ffffff 100%); background: url('+ small_widget_logo +') center bottom 3px no-repeat,  linear-gradient(bottom, #00d08f 10px, #00d08f 40px, #ffffff 41px, #ffffff 10rem, #ffffff 100%); background:  url('+ small_widget_logo +') center bottom 3px no-repeat, -webkit-linear-gradient(bottom, #00d08f 10px, #00d08f 40px, #ffffff 41px, #ffffff 10rem, #ffffff 100%);');
+		
+		$('.widget03-outer .widget01-code').val(new_code);
+		$('.widget03-outer #widget01').parent().html(new_code);
+	});
+	
+	//fd5960
+	$('.widget03-outer .widget_red_circle').click(function(){
+		small_widget_logo ="https://coworker.imgix.net/template/img/widgets/review/img_widget_bottom_logo.png";
+		$('.widget03-outer iframe#widget01').css('border','3px solid #fd5960');
+		//$('.widget03-outer iframe#widget01').attr('src','<?php echo $siteUrl; ?>widget-review/0/'+$('#select-space').val());
+		var widget_code = $('.widget03-outer #widget01').parent().html();
+		widget_code = widget_code.replace(/\&quot;/g,'');
+		var start_pos = widget_code.indexOf('background');
+		var end_pos = widget_code.indexOf(';',start_pos)+1; 
+		var text_to_get = widget_code.substring(start_pos,end_pos);
+		
+		widget_code = widget_code.replace(text_to_get,'');
+		//alert(widget_code);
+		var count = widget_code.indexOf("border");
+		
+		var new_code = widget_code.splice(count, 0, 'background: url('+ small_widget_logo +') center bottom 3px no-repeat,  --moz-linear-gradient(bottom, #fd5960 10px, #fd5960 40px, #ffffff 41px, #ffffff 10rem, #ffffff 100%); background: url('+ small_widget_logo +') center bottom 3px no-repeat,  -o-linear-gradient(bottom, #fd5960 10px, #fd5960 40px, #ffffff 41px, #ffffff 10rem, #ffffff 100%); background: url('+ small_widget_logo +') center bottom 3px no-repeat,   -ms-linear-gradient(bottom, #fd5960 10px, #fd5960 40px, #ffffff 41px, #ffffff 10rem, #ffffff 100%); background: url('+ small_widget_logo +') center bottom 3px no-repeat,  linear-gradient(bottom, #fd5960 10px, #fd5960 40px, #ffffff 41px, #ffffff 10rem, #ffffff 100%); background:  url('+ small_widget_logo +') center bottom 3px no-repeat, -webkit-linear-gradient(bottom, #fd5960 10px, #fd5960 40px, #ffffff 41px, #ffffff 10rem, #ffffff 100%);');
+		
+		$('.widget03-outer .widget01-code').val(new_code);
+		$('.widget03-outer #widget01').parent().html(new_code);
+	});
+	$('.widget03-outer .widget_white_circle').click(function(){
+		small_widget_logo ="https://coworker.imgix.net/template/img/widgets/review/img_widget_bottom_logo_black.png";
+		$('.widget03-outer iframe#widget01').css('border','3px solid #f6f6f6');
+		//$('.widget03-outer iframe#widget01').attr('src','<?php echo $siteUrl; ?>widget-review/2/'+$('#select-space').val());
+		var widget_code = $('.widget03-outer #widget01').parent().html();
+		widget_code = widget_code.replace(/\&quot;/g,'');
+		var start_pos = widget_code.indexOf('background');
+		var end_pos = widget_code.indexOf(';',start_pos)+1; 
+		var text_to_get = widget_code.substring(start_pos,end_pos);
+		
+		widget_code = widget_code.replace(text_to_get,'');
+		//alert(widget_code);
+		var count = widget_code.indexOf("border");
+		
+		var new_code = widget_code.splice(count, 0, 'background: url('+ small_widget_logo +') center bottom 3px no-repeat,  --moz-linear-gradient(bottom, #f6f6f6 10px, #f6f6f6 40px, #ffffff 41px, #ffffff 10rem, #ffffff 100%); background: url('+ small_widget_logo +') center bottom 3px no-repeat,  -o-linear-gradient(bottom, #f6f6f6 10px, #f6f6f6 40px, #ffffff 41px, #ffffff 10rem, #ffffff 100%); background: url('+ small_widget_logo +') center bottom 3px no-repeat,   -ms-linear-gradient(bottom, #f6f6f6 10px, #f6f6f6 40px, #ffffff 41px, #ffffff 10rem, #ffffff 100%); background: url('+ small_widget_logo +') center bottom 3px no-repeat,  linear-gradient(bottom, #f6f6f6 10px, #f6f6f6 40px, #ffffff 41px, #ffffff 10rem, #ffffff 100%); background:  url('+ small_widget_logo +') center bottom 3px no-repeat, -webkit-linear-gradient(bottom, #f6f6f6 10px, #f6f6f6 40px, #ffffff 41px, #ffffff 10rem, #ffffff 100%);');
+		
+		$('.widget03-outer .widget01-code').val(new_code);
+		$('.widget03-outer #widget01').parent().html(new_code);
+	});
+	
+	 var selected_link = $('#select-space option:selected').data('colink');
+		$('.your_website_review_widget_outer textarea').each(function(){
+			var id=this;
+      var code =  $(this).val();
+			code=code.replace(/href=""/g, "href=\""+selected_link+"\"");
+      $(id).val(code);
+		})
+		
+		$('.jscolor').each(function(){
+			$(this).attr('readonly','true');
+		});
+		/*var selected_value = $('#select-space option:selected').val();
+		$('.widget01-outer iframe#widget01').attr('src','<?php echo $siteUrl; ?>widget-review/3/' + <?php echo $first_space; ?>);
+		$('.widget02-outer iframe#widget01').attr('src','<?php echo $siteUrl; ?>widget-review/4/' + <?php echo $first_space; ?>);
+		$('.widget03-outer iframe#widget01').attr('src','<?php echo $siteUrl; ?>widget-review/1/' + <?php echo $first_space; ?>);
+		$('.widget04-outer iframe#widget01').attr('src','<?php echo $siteUrl; ?>widget-review/1/' + <?php echo $first_space; ?>);
+		*/
+		
+		
+		//$('.jscolor').css('background-color','#00d191');
+  } );
+  
+</script>
+<!--WIDGET SCRIPT END-->
+
+ 
+
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+</body>
+</html>
