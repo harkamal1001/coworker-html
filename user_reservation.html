@@ -2338,8 +2338,10 @@ $( function() {
 		$('.widget02-outer iframe#widget01').attr('src','http://www.staging.coworker.com/widget-review/4/' + '5015');
 		$('.widget03-outer iframe#widget01').attr('src','http://www.staging.coworker.com/widget-review/1/' + '5015');
 		$('.widget04-outer iframe#widget01').attr('src','http://www.staging.coworker.com/widget-review/1/' + '5015');
+		$('.link-to-swag-tab').click(function(){
+			$('#select-space').trigger("change");
+		});
 		
-		$('#select-space').trigger("change");
 		
 		//$('.jscolor').css('background-color','#00d191');
   } );
