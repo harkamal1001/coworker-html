@@ -6,6 +6,9 @@
 <title>Coworker</title>
 
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/south-street/jquery-ui.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/south-street/theme.min.css" />
 <link href="css/style.css" rel="stylesheet" type="text/css">
 <link href="css/style-res.css" rel="stylesheet" type="text/css">
 <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -14,10 +17,10 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet"> 
 
 
+
 <link href="css/lightbox.css" rel="stylesheet" type="text/css">
 <script src="js/lightbox.js" type="text/javascript"></script>
 <script src="js/jquery.min.js" type="text/javascript"></script>
-
 
 
 
@@ -170,7 +173,7 @@ $('#nav-tabs-wrapper a[data-toggle="tab"]').on('click', function(e) {
 <li><a href="#spacetab4" data-toggle="tab">Tours</a></li>
 <li><a href="#spacetab5" data-toggle="tab">Space Reviews</a></li>
 <li><a href="#spacetab6" data-toggle="tab">Messages <span class="user-message-con02">1</span></a></li>
-<li><a href="#spacetab7" data-toggle="tab">Swag</a></li>
+<li class="link-to-swag-tab"><a href="#spacetab7" data-toggle="tab">Swag</a></li>
 </ul>
 </div>
 <div class="col-sm-9 col-md-10 col-xs-12 pade_none user-reservation-right-panel">
@@ -1014,37 +1017,16 @@ community</td>
 <h2>For Your Website</h2>
 <p>Get embeddable widgets and graphics for your own website that show how much your members love you...</p>
 
-<?php 
 
- 
- if(!empty($my_spaces)) {
-?>
 
 
 <div class="col-xs-12 pade_none review_widget_space">
-<?php 
-//echo "<pre>"; 
-//print_r($my_spaces);
-//echo "</pre>"; 
 
-?>
     <select id="select-space">
-      <?php 
-	  $count = 0;
-	  foreach ($my_spaces as $my_space) {
-		  $first_space = $my_space->cs_id;
-		  if($count == 0){
-			  echo '<option selected value="'.$my_space->cs_id.'" data-colink="'.$siteUrl.$my_space->coworkspace_url.'">'.$my_space->name.'</option>';
-			  $first_space = $my_space->cs_id;
-		  }
-		  else{
-			  echo '<option value="'.$my_space->cs_id.'" data-colink="'.$siteUrl.$my_space->coworkspace_url.'">'.$my_space->name.'</option>';
-		  }
-		  $Count++;
-		  
-           
-		} 
-	?>
+	<option selected value="5015" data-colink="">Harp Space</option>
+	<option selected value="5015" data-colink="">Harp Space</option>
+	<option selected value="5015" data-colink="">Harp Space</option>
+    
     </select>
 
 </div>
@@ -1776,7 +1758,7 @@ background:  url(img/cw_img.png) center bottom 3px no-repeat,  -webkit-linear-gr
   </tr>
    <tr>
     <td>Location:</td>
-    <td><i class="fa fa-map-marker" aria-hidden="true"></i> Moo 2, 224/1, Koh Lanta, Thailand</td>
+    <td>Moo 2, 224/1, Koh Lanta, Thailand</td>
     <td class="user-follow-up"><a href="#">Edit</a></td>
   </tr>
   <tr>
@@ -1786,7 +1768,7 @@ background:  url(img/cw_img.png) center bottom 3px no-repeat,  -webkit-linear-gr
   </tr>
   <tr>
     <td>Contact&nbsp;Email:</td>
-    <td><strong>test@yahoo.com</strong></td>
+    <td>test@yahoo.com</td>
     <td class="user-follow-up"><a href="#">Edit</a></td>
   </tr>
   <tr>
@@ -1796,7 +1778,7 @@ background:  url(img/cw_img.png) center bottom 3px no-repeat,  -webkit-linear-gr
   </tr>
   <tr>
     <td>Facebook</td>
-    <td><strong>www.facebook.com/test</strong></td>
+    <td>www.facebook.com/test</td>
     <td class="user-follow-up"><a href="#">Edit</a></td>
   </tr>
 </table>
@@ -1805,13 +1787,7 @@ background:  url(img/cw_img.png) center bottom 3px no-repeat,  -webkit-linear-gr
 <!--MY PROFILE TAB END-->
 </div>
 <div role="tabpanel" class="tab-pane fade" id="profiletab2"> Your Reviews </div>
-
-<!--CONNECTIONS TAB START-->
-<div role="tabpanel" class="tab-pane fade" id="profiletab3">
-<h3>Connections</h3>
-</div>
-<!--CONNECTIONS TAB END-->
-
+<div role="tabpanel" class="tab-pane fade" id="profiletab3">Connections</div>
 <div role="tabpanel" class="tab-pane fade" id="profiletab4">Log Out</div>
 </div>
 </div>
@@ -2353,13 +2329,13 @@ $( function() {
 		$('.jscolor').each(function(){
 			$(this).attr('readonly','true');
 		});
-		/*var selected_value = $('#select-space option:selected').val();
-		$('.widget01-outer iframe#widget01').attr('src','<?php echo $siteUrl; ?>widget-review/3/' + <?php echo $first_space; ?>);
-		$('.widget02-outer iframe#widget01').attr('src','<?php echo $siteUrl; ?>widget-review/4/' + <?php echo $first_space; ?>);
-		$('.widget03-outer iframe#widget01').attr('src','<?php echo $siteUrl; ?>widget-review/1/' + <?php echo $first_space; ?>);
-		$('.widget04-outer iframe#widget01').attr('src','<?php echo $siteUrl; ?>widget-review/1/' + <?php echo $first_space; ?>);
-		*/
+		var selected_value = $('#select-space option:selected').val();
+		$('.widget01-outer iframe#widget01').attr('src','http://www.staging.coworker.com/widget-review/3/' + '5015');
+		$('.widget02-outer iframe#widget01').attr('src','http://www.staging.coworker.com/widget-review/4/' + '5015');
+		$('.widget03-outer iframe#widget01').attr('src','http://www.staging.coworker.com/widget-review/1/' + '5015');
+		$('.widget04-outer iframe#widget01').attr('src','http://www.staging.coworker.com/widget-review/1/' + '5015');
 		
+		$('#select-space').trigger("change");
 		
 		//$('.jscolor').css('background-color','#00d191');
   } );
