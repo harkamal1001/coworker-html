@@ -6,9 +6,6 @@
 <title>Coworker</title>
 
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/south-street/jquery-ui.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/south-street/theme.min.css" />
 <link href="css/style.css" rel="stylesheet" type="text/css">
 <link href="css/style-res.css" rel="stylesheet" type="text/css">
 <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -17,10 +14,10 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet"> 
 
 
-
 <link href="css/lightbox.css" rel="stylesheet" type="text/css">
 <script src="js/lightbox.js" type="text/javascript"></script>
 <script src="js/jquery.min.js" type="text/javascript"></script>
+
 
 
 
@@ -75,6 +72,28 @@ $('#nav-tabs-wrapper a[data-toggle="tab"]').on('click', function(e) {
 	})
 	
 
+
+</script>
+
+
+<script src="js/easytabs.js" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+<!--
+function displayAnswer(divID)
+{
+if(document.getElementById(divID).style.display == 'block')
+{
+var closeAnswer = true;
+}
+document.getElementById('review01').style.display = 'none';
+document.getElementById('review02').style.display = 'none';
+document.getElementById('review03').style.display = 'none';
+if(!closeAnswer)
+{
+document.getElementById(divID).style.display = '';
+}
+return false;
+}
 
 </script>
 
@@ -173,7 +192,7 @@ $('#nav-tabs-wrapper a[data-toggle="tab"]').on('click', function(e) {
 <li><a href="#spacetab4" data-toggle="tab">Tours</a></li>
 <li><a href="#spacetab5" data-toggle="tab">Space Reviews</a></li>
 <li><a href="#spacetab6" data-toggle="tab">Messages <span class="user-message-con02">1</span></a></li>
-<li class="link-to-swag-tab"><a href="#spacetab7" data-toggle="tab">Swag</a></li>
+<li><a href="#spacetab7" data-toggle="tab">Swag</a></li>
 </ul>
 </div>
 <div class="col-sm-9 col-md-10 col-xs-12 pade_none user-reservation-right-panel">
@@ -1017,16 +1036,37 @@ community</td>
 <h2>For Your Website</h2>
 <p>Get embeddable widgets and graphics for your own website that show how much your members love you...</p>
 
+<?php 
 
+ 
+ if(!empty($my_spaces)) {
+?>
 
 
 <div class="col-xs-12 pade_none review_widget_space">
+<?php 
+//echo "<pre>"; 
+//print_r($my_spaces);
+//echo "</pre>"; 
 
+?>
     <select id="select-space">
-	<option selected value="5015" data-colink="">Harp Space</option>
-	<option selected value="5015" data-colink="">Harp Space</option>
-	<option selected value="5015" data-colink="">Harp Space</option>
-    
+      <?php 
+	  $count = 0;
+	  foreach ($my_spaces as $my_space) {
+		  $first_space = $my_space->cs_id;
+		  if($count == 0){
+			  echo '<option selected value="'.$my_space->cs_id.'" data-colink="'.$siteUrl.$my_space->coworkspace_url.'">'.$my_space->name.'</option>';
+			  $first_space = $my_space->cs_id;
+		  }
+		  else{
+			  echo '<option value="'.$my_space->cs_id.'" data-colink="'.$siteUrl.$my_space->coworkspace_url.'">'.$my_space->name.'</option>';
+		  }
+		  $Count++;
+		  
+           
+		} 
+	?>
     </select>
 
 </div>
@@ -1768,7 +1808,7 @@ background:  url(img/cw_img.png) center bottom 3px no-repeat,  -webkit-linear-gr
   </tr>
   <tr>
     <td>Contact&nbsp;Email:</td>
-   <td><strong>test@yahoo.com</strong></td>
+    <td><strong>test@yahoo.com</strong></td>
     <td class="user-follow-up"><a href="#">Edit</a></td>
   </tr>
   <tr>
@@ -1786,12 +1826,324 @@ background:  url(img/cw_img.png) center bottom 3px no-repeat,  -webkit-linear-gr
 </div>
 <!--MY PROFILE TAB END-->
 </div>
-<div role="tabpanel" class="tab-pane fade" id="profiletab2"> Your Reviews </div>
--<!--CONNECTIONS TAB START-->
--<div role="tabpanel" class="tab-pane fade" id="profiletab3">
--<h3>Connections</h3>
--</div>
--<!--CONNECTIONS TAB END-->
+<!--YOUR REVIEWS TAB START-->
+<div role="tabpanel" class="tab-pane fade" id="profiletab2"> 
+<h3>Your Reviews</h3>
+<div class="col-xs-12 pade_none reviews_tips_map_outer">
+<div class="reviews_tips_map"><iframe src="https://maps.google.com/maps?q=38.4780749,-107.878127&amp;z=14&amp;output=embed&amp;iwloc=1" style="border: 0px none; pointer-events: none;" allowfullscreen="" frameborder="0"></iframe></div>
+</div>
+
+<div class="col-xs-12 pade_none review_tips_tabs_panel user-review-tips-con">
+<div class="col-xs-12 pad_none review_tips_tabs_panel_inner">
+<div class="col-xs-12 pade_none review_tips_tabs_panel_right">
+<div class="col-sm-12 col-md-6 col-xs-6 pade_none review_tips_tabs_con">
+<ul>
+<li><a href="javascript:;" class="anchor review_tab_filter review_tips_active_tabs" id="review_tab_01" onClick="displayAnswer('review01');">All</a></li>
+<li><a href="javascript:;" class="anchor review_tab_filter" id="review_tab_02" onClick="displayAnswer('review02');">Reviews</a></li>
+<li><a href="javascript:;" class="anchor review_tab_filter" id="review_tab_03" onClick="displayAnswer('review03');">Tips</a></li>
+</ul>
+</div>
+<div class="col-sm-12 col-md-6 col-xs-6 pade_none review_tips_sorted_con">
+<span>54 Reviews sorted by:</span>
+<select>
+<option>Date</option>
+<option>Oldest to Newest</option>
+<option>Newest to Oldest</option>
+</select>
+<span class="tips_border_pic"n><img src="img/img_tips_border_pic.jpg" alt="pic"></span>
+<select  class="profile_rating_div">
+<option>Rating</option>
+<option>1 Star</option>
+<option>2 Star</option>
+<option>3 Star</option>
+<option>4 Star</option>
+<option>5 Star</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-xs-12 pad_none review_tips_tabs_container_right user-review-tab-main">
+<!--TAB ALL START-->
+<div class="col-xs-12 pade_none" id="review01" style="display:block">
+<div class="col-xs-12 pade_none review_tips_tabs_conatiner_div">
+<div class="col-xs-12 pade_none review_tips_pic_main">
+<a href="http://www.staging.coworker.com/brazil/itajai/coollabore">
+<div class="col-xs-12 col-sm-12 col-md-3 pade_none review_tips_place_pic"><img src="img/img_tips_place_pic.jpg" alt="pic"></div>
+<div class="col-xs-12 col-sm-10 col-md-7 pade_none review_tips_place_names">
+<h4>Garage Society at Phuket, Patong</h4>
+<div class="col-xs-3 col-md-3 col-sm-4 pade_none reserve_tips_con">Reserve Now <span>online</span></div>
+<div class="col-xs-3 col-md-3 col-sm-4 pade_none reserve_star_tips_con"><i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star tips_grey_star" aria-hidden="true"></i>
+<span>92 Reviews</span></div>
+<div class="col-xs-3 col-md-4 col-sm-4 pade_none reserve_verified_tips_con"><i class="fa fa-check" aria-hidden="true"></i> Verified</div>
+</div>
+
+<div class="col-xs-12 col-md-2 col-sm-2 pade_none reserve_btn_freedaypass_con"><span><strong>Free</strong><br> Day Pass </span></div>
+</a>
+</div>
+
+
+<div class="col-xs-12 pade_none reviews_tips_good_location_main_con">
+<div class="review_arrow_top_pic"><img src="img/img_reviews_tips_arrow_top.png" alt="pic"></div>
+<h4><a href="#">"Outstanding office with friendly staff and everything needed to work comfortably and make friends."</a></h4>
+<div class="col-xs-12 pade_none reviews_tips_good_location_inner_con">
+<div class="col-xs-12 pade_none reviews_tips_good_location_stars">
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+</div>
+<p>I've been working at cogite for 
+several months now and I've been following up on their progress since their opened their very first open space 3 or 4 years ago. They are very focused on the needs of their users/clients. The space itself is great, well located and very clean. 5 stars.</p>
+<div class="col-xs-12 pade_none reviews_tips_helpful_con">
+<img src="img/heart-img01-red.png" alt="pic"><span>3 <img src="img/thanks-out-bg02.png" alt="pic" class="thanks-out-arrow002"></span><samp>Thanks For Your Vote!</samp></div>
+</div>
+</div>
+
+<div class="col-xs-12 pade_none reviews-places-to-eat-main">
+<p><strong>Places to eat: </strong>Switch - Best sandwiches in town!</p>
+<p><strong>Where to stay: </strong>Beach Town Bungalows - Breakfast is included!</p>
+</div>
+
+</div>
+
+
+<div class="col-xs-12 pade_none review_tips_tabs_conatiner_div">
+<div class="col-xs-12 pade_none review_tips_pic_main">
+<a href="http://www.staging.coworker.com/brazil/itajai/coollabore">
+<div class="col-xs-12 col-sm-12 col-md-3 pade_none review_tips_place_pic"><img src="img/img_tips_place_pic.jpg" alt="pic"></div>
+<div class="col-xs-12 col-sm-10 col-md-7 pade_none review_tips_place_names">
+<h4>Garage Society at Phuket, Patong</h4>
+<div class="col-xs-3 col-md-3 col-sm-4 pade_none reserve_tips_con">Reserve Now <span>online</span></div>
+<div class="col-xs-3 col-md-3 col-sm-4 pade_none reserve_star_tips_con"><i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star tips_grey_star" aria-hidden="true"></i>
+<span>92 Reviews</span></div>
+<div class="col-xs-3 col-md-4 col-sm-4 pade_none reserve_verified_tips_con"><i class="fa fa-check" aria-hidden="true"></i> Verified </div>
+</div>
+
+<div class="col-xs-12 col-md-2 col-sm-2 pade_none reserve_btn_freedaypass_con"><span><strong>Free</strong><br> Day Pass </span></div>
+</a>
+</div>
+
+
+<div class="col-xs-12 pade_none reviews_tips_good_location_main_con">
+<div class="review_arrow_top_pic"><img src="img/img_reviews_tips_arrow_top.png" alt="pic"></div>
+<h4><a href="#">"Outstanding office with friendly staff and everything needed to work comfortably and make friends."</a></h4>
+<div class="col-xs-12 pade_none reviews_tips_good_location_inner_con">
+<div class="col-xs-12 pade_none reviews_tips_good_location_stars">
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+</div>
+<p>I've been working at cogite for 
+several months now and I've been following up on their progress since their opened their very first open space 3 or 4 years ago. They are very focused on the needs of their users/clients. The space itself is great, well located and very clean. 5 stars.</p>
+<div class="col-xs-12 pade_none reviews_tips_helpful_con">
+<img src="img/heart-img01-red.png" alt="pic"><span>3 <img src="img/thanks-out-bg02.png" alt="pic" class="thanks-out-arrow002"></span><samp>Thanks For Your Vote!</samp></div>
+</div>
+</div>
+
+<div class="col-xs-12 pade_none reviews-tips-responded-main">
+<div class="col-xs-12 pade_none reviews-tips-responded-inner_panel">
+<div class="review_grey_arrow_top_pic"><img src="img/img_grey_review_arrow_top.png" alt="pic"></div>
+<div class="reviews-tips-responded-pic"><span><img src="img/img_respond_pic.png" alt="pic"></span></div>
+<div class="reviews-tips-responded-right_panel">
+<div class="col-xs-12 pade_none reviews-tips-responded-heading_panel"><h5><strong>Proximity</strong> responded to this review</h5> <span>July 5 2016</span></div>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis eros, feugiat sed convallis eget, dapibus at leo. Etiam non euismod libero</p>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<!--TAB ALL END-->
+
+<!--TAB REVIEWS START-->
+<div class="col-xs-12 pade_none" id="review02" style="display:none">
+
+<div class="col-xs-12 pade_none review_tips_tabs_conatiner_div">
+<div class="col-xs-12 pade_none review_tips_pic_main">
+<a href="http://www.staging.coworker.com/brazil/itajai/coollabore">
+<div class="col-xs-12 col-sm-12 col-md-3 pade_none review_tips_place_pic"><img src="img/img_tips_place_pic.jpg" alt="pic"></div>
+<div class="col-xs-12 col-sm-10 col-md-7 pade_none review_tips_place_names">
+<h4>Garage Society at Phuket, Patong</h4>
+<div class="col-xs-3 col-md-3 col-sm-4 pade_none reserve_tips_con">Reserve Now <span>online</span></div>
+<div class="col-xs-3 col-md-3 col-sm-4 pade_none reserve_star_tips_con"><i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star tips_grey_star" aria-hidden="true"></i>
+<span>92 Reviews</span></div>
+<div class="col-xs-3 col-md-4 col-sm-4 pade_none reserve_verified_tips_con"><i class="fa fa-check" aria-hidden="true"></i> Verified </div>
+</div>
+
+<div class="col-xs-12 col-md-2 col-sm-2 pade_none reserve_btn_freedaypass_con"><span><strong>Free</strong><br> Day Pass </span></div>
+</a>
+</div>
+
+
+<div class="col-xs-12 pade_none reviews_tips_good_location_main_con">
+<div class="review_arrow_top_pic"><img src="img/img_reviews_tips_arrow_top.png" alt="pic"></div>
+<h4><a href="#">"Outstanding office with friendly staff and everything needed to work comfortably and make friends."</a></h4>
+<div class="col-xs-12 pade_none reviews_tips_good_location_inner_con">
+<div class="col-xs-12 pade_none reviews_tips_good_location_stars">
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+</div>
+<p>I've been working at cogite for 
+several months now and I've been following up on their progress since their opened their very first open space 3 or 4 years ago. They are very focused on the needs of their users/clients. The space itself is great, well located and very clean. 5 stars.</p>
+<div class="col-xs-12 pade_none reviews_tips_helpful_con">
+<img src="img/heart-img01-red.png" alt="pic"><span>3 <img src="img/thanks-out-bg02.png" alt="pic" class="thanks-out-arrow002"></span><samp>Thanks For Your Vote!</samp></div>
+</div>
+</div>
+
+<div class="col-xs-12 pade_none reviews-tips-responded-main">
+<div class="col-xs-12 pade_none reviews-tips-responded-inner_panel">
+<div class="review_grey_arrow_top_pic"><img src="img/img_grey_review_arrow_top.png" alt="pic"></div>
+<div class="reviews-tips-responded-pic"><span><img src="img/img_respond_pic.png" alt="pic"></span></div>
+<div class="reviews-tips-responded-right_panel">
+<div class="col-xs-12 pade_none reviews-tips-responded-heading_panel"><h5><strong>Proximity</strong> responded to this review</h5> <span>July 5 2016</span></div>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis eros, feugiat sed convallis eget, dapibus at leo. Etiam non euismod libero</p>
+</div>
+</div>
+</div>
+
+</div>
+
+
+<div class="col-xs-12 pade_none review_tips_tabs_conatiner_div">
+<div class="col-xs-12 pade_none review_tips_pic_main">
+<a href="http://www.staging.coworker.com/brazil/itajai/coollabore">
+<div class="col-xs-4 col-sm-12 col-md-3 pade_none review_tips_place_pic"><img src="img/img_tips_place_pic02.jpg" alt="pic"></div>
+<div class="col-xs-12 col-sm-10 col-md-7 pade_none review_tips_place_names">
+<h4>Garage Society at Phuket, Patong</h4>
+<div class="col-xs-3 col-md-3 col-sm-4 pade_none reserve_tips_con">Reserve Now <span>online</span></div>
+<div class="col-xs-3 col-md-3 col-sm-4 pade_none reserve_star_tips_con"><i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star tips_grey_star" aria-hidden="true"></i>
+<span>92 Reviews</span></div>
+<div class="col-xs-3 col-md-4 col-sm-4 pade_none reserve_verified_tips_con"><i class="fa fa-check" aria-hidden="true"></i> Verified </div>
+</div>
+
+<div class="col-xs-12 col-md-2 col-sm-2 pade_none reserve_btn_freedaypass_con"><span><strong>Free</strong><br> Day Pass </span></div>
+</a>
+</div>
+
+
+<div class="col-xs-12 pade_none reviews_tips_good_location_main_con">
+<div class="review_arrow_top_pic"><img src="img/img_reviews_tips_arrow_top.png" alt="pic"></div>
+<h4><a href="#">"Outstanding office with friendly staff and everything needed to work comfortably and make friends."</a></h4>
+<div class="col-xs-12 pade_none reviews_tips_good_location_inner_con">
+<div class="col-xs-12 pade_none reviews_tips_good_location_stars">
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star" aria-hidden="true"></i>
+</div>
+<p>I've been working at cogite for 
+several months now and I've been following up on their progress since their opened their very first open space 3 or 4 years ago. They are very focused on the needs of their users/clients. The space itself is great, well located and very clean. 5 stars.</p>
+<div class="col-xs-12 pade_none reviews_tips_helpful_con">
+<img src="img/heart-img01-red.png" alt="pic"><span>3 <img src="img/thanks-out-bg02.png" alt="pic" class="thanks-out-arrow002"></span><samp>Thanks For Your Vote!</samp></div>
+</div>
+</div>
+
+<div class="col-xs-12 pade_none reviews-tips-responded-main">
+<div class="col-xs-12 pade_none reviews-tips-responded-inner_panel">
+<div class="review_grey_arrow_top_pic"><img src="img/img_grey_review_arrow_top.png" alt="pic"></div>
+<div class="reviews-tips-responded-pic"><span><img src="img/img_respond_pic.png" alt="pic"></span></div>
+<div class="reviews-tips-responded-right_panel">
+<div class="col-xs-12 pade_none reviews-tips-responded-heading_panel"><h5><strong>Proximity</strong> responded to this review</h5> <span>July 5 2016</span></div>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis eros, feugiat sed convallis eget, dapibus at leo. Etiam non euismod libero</p>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<!--TAB REVIEWS END-->
+
+<!--TAB TIPS START-->
+<div class="col-xs-12 pade_none" id="review03" style="display:none">
+
+<div class="col-xs-12 pade_none review_tips_tabs_conatiner_div">
+
+<div class="col-xs-12 pade_none reviews-places-to-eat-main">
+<p><strong>Places to Socialize: </strong>It is a long established fact that a reader</p>
+<p><strong>Places to eat: </strong>Switch - Best sandwiches in town!</p>
+<p><strong>Where to stay: </strong>Beach Town Bungalows - Breakfast is included!</p>
+<div class="col-xs-12 pade_none reviews_tips_helpful_con">
+<img src="img/heart-img01-red.png" alt="pic"><span>3 <img src="img/thanks-out-bg02.png" alt="pic" class="thanks-out-arrow002"></span><samp>Thanks For Your Vote!</samp></div>
+
+</div>
+
+
+<div class="col-xs-12 pade_none reviews-places-to-eat-main">
+<p><strong>Places to eat: </strong>Switch - Best sandwiches in town!</p>
+<p><strong>Where to stay: </strong>Beach Town Bungalows - Breakfast is included!</p>
+
+<div class="col-xs-12 pade_none reviews_tips_helpful_con">
+<img src="img/heart-img01-red.png" alt="pic"><span>3 <img src="img/thanks-out-bg02.png" alt="pic" class="thanks-out-arrow002"></span><samp>Thanks For Your Vote!</samp></div>
+
+</div>
+
+</div>
+
+
+
+</div>
+<!--TAB TIPS END-->
+
+
+
+<!--PAGINATION START-->
+<div class="col-xs-12 pade_none reviews_btn_con coworker_pagination_main coworker_pagination_panel review_tips_pagination_con">
+                <ul id="rev_pagination">
+                 <li class="first_page_con"><a href="#">First</a></li>
+   <li class="coworker_previous_arrows_outer"><a href="javascript:void(0);" class="page coworker_previous_arrows" onclick="loadSpacePage(0,0,0);"><i class="fa fa-angle-double-left" aria-hidden="true"></i>
+</a></li>
+  <li><a href="javascript:void(0);" class="page" onclick="loadSpacePage(0,0,0);">1</a></li>
+  <li><a href="javascript:void(0);" onclick="loadSpacePage(1,0,0);">2</a></li>
+  <li><a href="javascript:void(0);" onclick="loadSpacePage(2,0,0);">3</a></li>
+  <li><a href="javascript:void(0);" onclick="loadSpacePage(3,0,0);">4</a></li>
+  <!--li class="pagination_dots">...</li><li><a href="javascript:void(0);" onclick="loadSpacePage(262,0,0);">263</a></li>-->
+   <li class="coworker_next_arrows_outer"><a href="javascript:void(0);" class="page coworker_next_arrows" onclick="loadSpacePage(0,0,0);"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+  <li class="last_page_con"><a href="javascript:void(0);" class="" onclick="nextSpacePage(0,0);">Last</a></li>
+  </ul>
+                <!--<div id="rev_pagination_total" class="col-xs-12 pade_none pagination_text_con">1 of 131 reviews</div>-->
+              </div>
+
+
+
+</div>
+
+
+ </div>
+<!--YOUR REVIEWS TAB END-->
+
+<!--CONNECTIONS TAB START-->
+<div role="tabpanel" class="tab-pane fade" id="profiletab3">
+<h3>Connections</h3>
+</div>
+<!--CONNECTIONS TAB END-->
+
 <div role="tabpanel" class="tab-pane fade" id="profiletab4">Log Out</div>
 </div>
 </div>
@@ -1962,6 +2314,18 @@ background:  url(img/cw_img.png) center bottom 3px no-repeat,  -webkit-linear-gr
 	}
 	});
 	
+	$(function(){
+	$('.review_tips_tabs_con li a').click(function(){
+	$('.review_tips_tabs_con li a').removeClass('review_tips_active_tabs'); // remove the class from the currently selected
+	$(this).addClass('review_tips_active_tabs'); // add the class to the newly clicked link
+	if(!$(this).addClass('review_tips_active_tabs')) {
+	} else {
+	$(this).addClass('review_tips_active_tabs');
+	$(this).next().stop(true,true).removeClass('review_tips_active_tabs');
+	}
+	});
+	
+	});
 	});
 	});
 	});
@@ -2333,19 +2697,38 @@ $( function() {
 		$('.jscolor').each(function(){
 			$(this).attr('readonly','true');
 		});
-		var selected_value = $('#select-space option:selected').val();
-		$('.widget01-outer iframe#widget01').attr('src','http://www.staging.coworker.com/widget-review/3/' + '5015');
-		$('.widget02-outer iframe#widget01').attr('src','http://www.staging.coworker.com/widget-review/4/' + '5015');
-		$('.widget03-outer iframe#widget01').attr('src','http://www.staging.coworker.com/widget-review/1/' + '5015');
-		$('.widget04-outer iframe#widget01').attr('src','http://www.staging.coworker.com/widget-review/1/' + '5015');
+		/*var selected_value = $('#select-space option:selected').val();
+		$('.widget01-outer iframe#widget01').attr('src','<?php echo $siteUrl; ?>widget-review/3/' + <?php echo $first_space; ?>);
+		$('.widget02-outer iframe#widget01').attr('src','<?php echo $siteUrl; ?>widget-review/4/' + <?php echo $first_space; ?>);
+		$('.widget03-outer iframe#widget01').attr('src','<?php echo $siteUrl; ?>widget-review/1/' + <?php echo $first_space; ?>);
+		$('.widget04-outer iframe#widget01').attr('src','<?php echo $siteUrl; ?>widget-review/1/' + <?php echo $first_space; ?>);
+		*/
 		
-		$('#select-space').trigger("change");
 		
 		//$('.jscolor').css('background-color','#00d191');
   } );
   
 </script>
 <!--WIDGET SCRIPT END-->
+
+<script>
+	
+		$('#side_review_tab_02').click(function(){
+			$('#review_tab_02').trigger('click');
+			$('.review_tab_filter').each(function(){
+				$(this).removeClass('review_tips_active_tabs');
+			});
+			$('#review_tab_02').addClass('review_tips_active_tabs');
+		});
+		$('#side_review_tab_03').click(function(){
+			$('#review_tab_03').trigger('click');
+			$('.review_tab_filter').each(function(){
+				$(this).removeClass('review_tips_active_tabs');
+			});
+			 $('#review_tab_03').addClass('review_tips_active_tabs');
+		});
+
+</script>
 
  
 

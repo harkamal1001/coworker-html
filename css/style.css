@@ -4853,3 +4853,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57baea', end
 .user-unread-message { border:2px solid #f00; }
 
 .user-space-review-main { padding: 0 20px 50px !important;  background: #fff;  }
+
+.user-review-tab-main { background:#fff; padding:40px 30px !important; }
+.user-review-tips-con { padding:18px 20px !important; }
