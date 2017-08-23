@@ -360,6 +360,32 @@
 /*API PAGE END*/
 
 
+/*REVIEWS AND TIPS PAGE START 31 JULY*/
+.review_tips_tabs_container_left_outer {
+  width: 230px;
+}
+.review_tips_tabs_container_left h2 {
+  font-size: 19px;
+}
+.review_tips_place_pic img {
+  width: 92%;
+}
+.review_tips_place_names {
+  margin: 0;
+}
+.reserve_tips_con {
+  font-size: 11px;
+}
+.reserve_tips_con span {
+    font-size: 8px;
+}
+.reserve_star_tips_con {
+    font-size: 10px;
+}
+/*REVIEWS AND TIPS PAGE END 31 JULY*/
+
+
+
 /*USER RESERVATION PAGE START*/
 .user-reservation-left-panel h2 {
 	font-size: 14px;
@@ -1146,6 +1172,72 @@ line-height: 17px;
 	font-size: 20px;
 }
 /*API PAGE END*/
+
+/*REVIEWS AND TIPS PAGE START 31 JULY*/
+.review_tips_tabs_container_left_outer {
+  width: 230px;
+  margin-top: -430px;
+}
+.review_tips_tabs_container_left h2 {
+  font-size: 19px;
+}
+.review_tips_tabs_con li {
+  display: inline-block;
+  float: none;
+  margin-right: 3px;
+}
+.review_tips_tabs_con li a {
+  font-size: 14px;
+  padding: 7px;
+  width: 80px;
+}
+.review_tips_tabs_con {
+  text-align: center;
+}
+.review_tips_sorted_con {
+  text-align: center;
+}
+.reviews_tips_map iframe {
+  height: 220px;
+}
+.reserve_btn_freedaypass_con {
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+.review_tips_place_names {
+  margin: 8px 0;
+}
+.reviews-tips-responded-pic {
+  width: 22%;
+}
+.reviews-tips-responded-right_panel {
+  width: 78%;
+}
+.reviews-tips-responded-right_panel h5 {
+  font-size: 16px;
+  width: 100%;
+}
+.reviews-tips-responded-right_panel span {
+  font-size: 12px;
+  text-align: left;
+  width: 100%;
+}
+.reviews-tips-responded-main {
+  padding-left: 50px !important;
+}
+.reviews_tips_good_location_main_con h4 a {
+  font-size: 16px;
+  line-height: 22px;
+}
+.review_tips_banner_inner {
+  font-size: 27px;
+  line-height: 37px;
+}
+/*REVIEWS AND TIPS PAGE END 31 JULY*/
+
+
+
 
 /*USER RESERVATION PAGE START*/
 .user-reservation-left-panel h2 {
@@ -2299,6 +2391,123 @@ line-height: 17px;
 	margin-bottom: 14px;
 }
 /*API PAGE END*/
+/*REVIEWS AND TIPS PAGE START 31 JULY*/
+.review_tips_tabs_container_left_outer {
+  margin:10px 0 20px;
+  width: 100%;
+  position: static;
+}
+.review_tips_tabs_container {
+  padding: 10px 0 !important;
+}
+.review_tips_tabs_container_left ul {
+  width: 100%; margin:22px 0 ;
+}
+/*.review_tips_tabs_container_left li:nth-child(2) {
+  border-left: 1px solid #d2d2d2;
+  border-right: 1px solid #d2d2d2;
+}*/
+.reviews_tips_good_location_main_con { 
+  padding: 20px 20px 30px !important; margin: 20px 0 0;
+}
+.review_tips_tabs_container_left h2 {
+  font-size: 19px; line-height: 31px
+}
+.review_tips_tabs_con li {
+  display: inline-block;
+  float: none;
+  margin-right: 3px;
+}
+.review_tips_tabs_con li a {
+  font-size: 14px;
+  padding: 7px;
+  width: 80px;
+}
+.review_tips_tabs_con {
+  text-align: center;
+}
+.review_tips_sorted_con {
+  text-align: center;
+}
+.reviews_tips_map iframe {
+  height: 220px;
+}
+.reserve_btn_freedaypass_con {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+}
+.review_tips_tabs_panel_right {
+  padding: 0 10px !important;
+}
+.review_tips_tabs_con {
+  text-align: left;
+}
+.review_tips_place_names {
+  margin: 8px 0;
+}
+.reviews-tips-responded-pic {
+  width: 22%;
+}
+.reviews-tips-responded-right_panel {
+  width: 78%;
+}
+.reviews-tips-responded-right_panel h5 {
+  font-size: 16px;
+  width: 100%;
+}
+.reviews-tips-responded-right_panel span {
+  font-size: 12px;
+  text-align: left;
+  width: 100%;
+}
+.reviews-tips-responded-main {
+  padding-left: 50px !important;
+}
+.reviews_tips_good_location_main_con h4 a {
+  font-size: 16px;
+  line-height: 22px;
+}
+.review_tips_tabs_container_inner {
+  padding: 0 10px !important;
+}
+.review_tips_banner_inner {
+  font-size: 27px;
+  line-height: 37px;
+}
+
+.review_tips_tabs_container_right {
+  margin-top: 20px;
+}
+.review_white002_top_con, .review_white002_bottom_con {
+  float: left !important;
+  padding: 0 15px !important;
+  width: 50% !important;
+}
+.review_tips_client_pic span img {
+  width: 70%;
+}
+.review_tips_tabs_container_left samp {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0; 
+}
+.review_tips_tabs_container_left samp .fa-map-marker::before {
+  font-size: 16px;
+}
+.review_tips_tabs_container_left li a {
+  padding: 10px 9px;
+}
+.review_white002_bottom_con {
+  margin: 10px 0;
+}
+.review_tips_place_pic img {
+  width: 200px;
+}
+/*REVIEWS AND TIPS PAGE END 31 JULY*/
+
+
+
 
 /*USER RESERVATION PAGE START*/
 .user-right-main-tabs {
@@ -3655,6 +3864,146 @@ line-height: 17px;
 	margin-bottom: 0;
 }
 /*API PAGE END*/
+
+
+/*REVIEWS AND TIPS PAGE START 31 JULY*/
+.review_tips_tabs_container_left_outer {
+  margin: 0 0 10px;
+  width: 100%;
+  position: static;
+}
+.review_tips_tabs_container {
+  padding: 10px 0 50px !important;
+}
+.reviews-places-to-eat-main {
+  margin: 20px 0 0;
+}
+.review_tips_tabs_container_left ul {
+  margin: 23px 0;
+  width: 92%;
+}
+.review_tips_tabs_container_left li {
+  float: left;
+  width: 100%;
+}
+/*.review_tips_tabs_container_left li:nth-child(2) {
+  border-left: 1px solid #d2d2d2;
+  border-right: 1px solid #d2d2d2;
+}*/
+.reviews_tips_good_location_main_con { 
+  padding: 20px 20px 30px !important; margin: 20px 0 0;
+}
+
+.review_tips_tabs_con li {
+  display: inline-block;
+  float: none;
+  margin-right: 3px;
+}
+.review_tips_tabs_con li a {
+  font-size: 15px;
+  padding: 9px 10px;
+  width: 100px;
+}
+.review_tips_tabs_con {
+  text-align: center;
+}
+.review_tips_sorted_con {
+  text-align: center;
+  width: 100%;
+}
+.review_tips_tabs_conatiner_div {
+  margin-top: 20px;
+}
+.review_arrow_top_pic {
+  left: 80px;
+  top: -17px;
+}
+.review_tips_tabs_container_left {
+  padding: 12px 0px !important;
+}
+.reviews_tips_map iframe {
+  height: 150px;
+}
+.reserve_btn_freedaypass_con {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+}
+.review_tips_tabs_panel_right {
+  padding: 0 10px !important;
+}
+.review_tips_tabs_con {
+  text-align: center;
+  width: 100%;
+}
+.review_tips_place_names {
+  margin: 8px 0;
+}
+.reviews-tips-responded-pic {
+  width: 22%;
+}
+.reviews-tips-responded-right_panel {
+  width: 78%;
+}
+.reviews-tips-responded-right_panel h5 {
+  font-size: 16px;
+  width: 100%;
+}
+.reviews-tips-responded-right_panel span {
+  font-size: 12px;
+  text-align: left;
+  width: 100%;
+}
+.reviews-tips-responded-main {
+  padding-left: 50px !important;
+}
+.reviews_tips_good_location_main_con h4 a {
+  font-size: 16px;
+  line-height: 22px;
+}
+.review_tips_tabs_container_inner {
+  padding: 0 10px !important;
+  margin: 30px 0 ;
+}
+.review_tips_banner_inner {
+  font-size: 24px; line-height: 28px;
+}
+
+
+.review_tips_tabs_container_right {
+  margin-top: 20px;
+}
+.review_white002_top_con, .review_white002_bottom_con {
+  float: left !important;
+  padding: 0 15px !important;
+  width: 50% !important;
+}
+.review_tips_client_pic span img {
+  width: 70%;
+}
+.review_tips_tabs_container_left h2 {
+  font-size: 15px;
+  line-height: 31px;
+}
+.review_tips_tabs_container_left samp {
+  font-size: 13px;
+  line-height: 20px;
+  margin: 0;
+}
+.review_tips_tabs_container_left samp .fa-map-marker::before {
+  font-size: 16px;
+}
+.review_tips_tabs_container_left li a {
+  padding: 10px 9px;
+}
+.review_white002_bottom_con {
+  margin: 10px 0;
+}
+.review_tips_place_pic img {
+  width: 200px;
+}
+/*REVIEWS AND TIPS PAGE END 31 JULY*/
+
 
 
 /*USER RESERVATION PAGE START*/
@@ -5244,6 +5593,211 @@ line-height: 17px;
 	margin-bottom: 0;
 }
 /*API PAGE END*/
+
+
+/*REVIEWS AND TIPS PAGE START 31 JULY*/
+.review_tips_tabs_container_left_outer {
+  margin-top: 0;
+  width: 100%;
+  position: static;
+}
+.review_tips_tabs_container {
+  padding: 40px 0 50px !important;
+}
+.reviews-places-to-eat-main {
+  margin: 20px 0 0;
+  padding: 20px !important;  font-size: 13px;
+}
+.review_tips_place_names h4  {
+  font-size: 16px;
+  line-height: 42px;
+}
+.review_tips_tabs_conatiner_div {
+  margin-bottom: 20px;
+}
+.review_tips_place_pic img {
+  width: 160px;
+}
+.reserve_tips_con {
+  float: left;
+  width: 100%;
+}
+.review_tips_tabs_container_left ul {
+  margin: 0;
+}
+.reserve_star_tips_con {
+  float: left;
+  width: 50%;
+}
+.reserve_btn_freedaypass_con span {
+  font-size: 12px;
+  line-height: 15px;
+  padding: 6px 6px;
+}
+.reserve_btn_freedaypass_con strong {
+  font-size: 20px;
+}
+.review_arrow_top_pic {
+  left: 30px;
+  top: -16px;
+}
+.reviews_tips_good_location_inner_con p {
+  font-size: 13px;
+  line-height: 17px;
+}
+.reviews_tips_helpful_con samp {
+  font-size: 13px;
+}
+.reviews_tips_helpful_con span {
+  font-size: 13px;
+  margin: 0 5px 0 8px;
+  padding: 0px 5px 0;
+}
+.reviews-places-to-eat-main p {
+  line-height: 20px;
+  margin-bottom: 6px;
+}
+.reviews_tips_good_location_main_con { 
+  padding: 20px 20px 30px !important; margin: 20px 0 0;
+}
+.review_tips_tabs_container_left h2 {
+  font-size: 19px;
+}
+.review_tips_tabs_con li {
+  display: inline-block;
+  float: none;
+  margin-right: 3px;
+}
+.review_tips_tabs_con li a {
+  font-size: 15px;
+  padding: 8px 9px;
+  width: 90px;
+}
+.review_tips_tabs_con {
+  text-align: center;
+}
+.review_tips_sorted_con {
+  text-align: center;
+  width: 100%;
+}
+.review_tips_tabs_conatiner_div {
+  margin-top: 20px;
+}
+.review_arrow_top_pic {
+  left: 80px;
+  top: -17px;
+}
+.review_tips_tabs_container_left {
+  padding: 8px 0 !important;
+}
+.reviews_tips_map iframe {
+  height: 150px;
+}
+.reserve_btn_freedaypass_con {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+}
+.review_tips_tabs_panel_right {
+  padding: 0 10px !important;
+}
+.review_tips_tabs_con {
+  text-align: center;
+  width: 100%;
+}
+.review_tips_place_names {
+  margin: 8px 0;
+}
+.reviews-tips-responded-pic {
+  width: 100%;
+  text-align: center; margin: 0 0 10px;
+}
+.reviews-tips-responded-right_panel {
+  width: 100%;
+}
+.reviews-tips-responded-inner_panel {
+  margin: 27px 0 0;
+  padding: 16px 15px !important;
+}
+.reviews-tips-responded-right_panel h5 {
+  font-size: 15px;
+  width: 100%;
+}
+.reviews-tips-responded-right_panel p {
+  font-size: 13px;
+  line-height: 19px;
+}
+.reviews-tips-responded-right_panel span {
+  font-size: 12px;
+  text-align: left;
+  width: 100%;
+}
+.reviews-tips-responded-main {
+  padding-left: 20px !important;
+}
+.reviews_tips_good_location_main_con h4 a {
+  font-size: 16px;
+  line-height: 22px;
+}
+.review_tips_tabs_container_inner {
+  padding: 0 10px !important;
+}
+.review_tips_banner_inner {
+  font-size: 22px;  line-height: 28px;
+}
+.coworker_pagination_main li a {
+  font-size: 13px;
+  height: 35px;
+  line-height: 34px;
+}
+.coworker_pagination_main li {
+  height: 36px;
+  margin: 0 1px;
+  width: 36px;
+}
+.review_tips_tabs_container_right {
+  margin-top: 20px;
+}
+.review_white002_top_con, .review_white002_bottom_con {
+  float: left !important;
+  padding: 0 5px !important;
+  width: 50% !important;
+}
+.review_tips_client_pic span img {
+  width: 70%;
+}
+.review_tips_tabs_container_left h2 {
+  font-size: 13px;
+  line-height: 20px;
+}
+.review_tips_tabs_container_left samp {
+  font-size: 11px;
+  line-height: 20px;
+  margin: 0;
+}
+.review_tips_tabs_container_left li a {
+  font-size: 12px;
+  padding: 8px 9px;
+}
+.review_white002_bottom_con {
+  margin: 10px 0;
+}
+.review_tips_tabs_container_left samp .fa-map-marker::before {
+  font-size: 14px;
+}
+.review_tips_sorted_con span {
+    line-height: 20px;
+    float: left;
+    width: 100% !important;
+    margin: 10px 0 0;
+}
+span.tips_border_pic {
+    padding: 0 4px;
+    float: none !important;
+    width: auto !important;
+}
+/*REVIEWS AND TIPS PAGE END 31 JULY*/
+
 
 
 /*USER RESERVATION PAGE START*/
